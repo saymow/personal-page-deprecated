@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { Container } from './styles';
 import Layout from '../../components/Layout';
@@ -32,9 +33,13 @@ const Blog: React.FC = () => {
           {data.allMarkdownRemark.edges.map((edge) => (
             <li key={edge.node.fields.slug}>
               <h2>{edge.node.frontmatter.title}</h2>
-              <Link to={edge.node.fields.slug}>
+              <AniLink
+                paintDrip
+                color="#151616"
+                to={'/blog/'.concat(edge.node.fields.slug)}
+              >
                 <span>{edge.node.frontmatter.date}</span>
-              </Link>
+              </AniLink>
             </li>
           ))}
         </ul>

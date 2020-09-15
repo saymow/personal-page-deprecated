@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { Container, Box, LogoBox, NavBar } from './styles';
 
@@ -12,14 +13,14 @@ const Header: React.FC = () => {
         </LogoBox>
         <NavBar>
           <ul>
-            <Link to="/">
+            <AniLink cover bg="#151616" to="/">
               <li>Main</li>
-            </Link>
-            <Link to="/blog">
+            </AniLink>
+            <AniLink cover bg="#151616" direction="right" to="/blog">
               <li>Blog</li>
-            </Link>
+            </AniLink>
             <Link to="*">
-              <li>Todo</li>
+              <li>Contact me</li>
             </Link>
           </ul>
         </NavBar>
