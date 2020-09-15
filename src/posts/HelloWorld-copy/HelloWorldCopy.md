@@ -3,6 +3,4 @@
   date: "14-09-2020"
 ---
 
-![Raskolnikov](./raskolnikov.jpg)
-
 this is my very first post.
