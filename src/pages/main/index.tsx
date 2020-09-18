@@ -3,17 +3,10 @@ import React, { useEffect, useRef } from 'react';
 import ContactForm from '../../components/ContactForm';
 import Head from '../../components/Head';
 import Layout from '../../components/Layout';
+import Frame from './Frame';
 
 import {
   Container,
-  Frame,
-  Background,
-  FrameContent,
-  MainSquare,
-  ShadowSquare,
-  Title,
-  NameBox,
-  Decorator,
   Content,
   Section,
   SectionTitle,
@@ -57,24 +50,7 @@ const Main: React.FC = () => {
     <Layout>
       <Head />
       <Container>
-        <Frame>
-          <Background>
-            <div></div>
-          </Background>
-          <FrameContent>
-            <MainSquare>
-              <ShadowSquare />:
-              <Title>
-                Web <br />
-                Developer
-              </Title>
-            </MainSquare>
-            <NameBox>
-              <Decorator />
-              <p>Gustavo Alves</p>
-            </NameBox>
-          </FrameContent>
-        </Frame>
+        <Frame />
         <Content>
           <Section ref={sectionsRef[0]}>
             <SectionTitle>About me</SectionTitle>

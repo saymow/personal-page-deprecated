@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  background: #121212;
+  background: var(--color-background-secondary);
 `;
 
 export const Box = styled.footer`
@@ -22,7 +22,7 @@ export const Box = styled.footer`
   }
 
   > p {
-    color: #ccc;
+    color: var(--color-text-secondary);
     text-align: center;
   }
 `;
@@ -53,7 +53,7 @@ export const Section = styled.section`
       }
 
       &:not(:first-child) {
-        color: #ccc;
+        color: var(--color-text-secondary);
       }
     }
   }

@@ -19,12 +19,12 @@ export const Input = styled.div`
   input {
     outline: 0;
     padding: 1.2rem 1.6rem;
-    border: 1px solid #bbb;
+    border: 1px solid var(--color-text-secondary);
 
     &:focus + label,
     &:not(:placeholder-shown) + label {
       transform: translate(-1.2rem, calc(-100% - 2rem));
-      color: #ccc;
+      color: var(--color-text-secondary);
       font-weight: bold;
     }
   }
@@ -40,7 +40,7 @@ export const Input = styled.div`
   label,
   input {
     font-size: 2rem;
-    color: #151616;
+    color: var(--color-background);
   }
 `;
 
@@ -50,7 +50,7 @@ export const Textarea = styled.div`
 
   label {
     line-height: 3rem;
-    color: #ccc;
+    color: var(--color-text-secondary) ccc;
     font-weight: bold;
   }
 
@@ -59,12 +59,12 @@ export const Textarea = styled.div`
     font-size: 2rem;
   }
   textarea {
-    color: #151616;
+    color: var(--color-background);
     padding: 1.2rem 1.6rem;
 
     width: 100%;
     outline: 0;
-    border: 1px solid #bbb;
+    border: 1px solid var(--color-text-secondary);
     height: 16rem;
     min-height: 8rem;
     max-height: 24rem;
@@ -77,7 +77,7 @@ export const Button = styled.button`
   margin-left: auto;
 
   font-size: 2rem;
-  background: #9f69f8;
+  background: var(--color-purple);
 
   cursor: pointer;
   min-width: 20%;

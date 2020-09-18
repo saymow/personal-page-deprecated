@@ -67,7 +67,7 @@ export const NavBar = styled.nav`
 
       &:last-child {
         font-weight: bold;
-        background: #9f69f8;
+        background: var(--color-purple);
       }
     }
   }
