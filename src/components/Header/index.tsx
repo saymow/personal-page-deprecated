@@ -39,7 +39,7 @@ const Header: React.FC = () => {
             <AniLink cover bg="#151616" direction="right" to="/blog">
               <li>Blog</li>
             </AniLink>
-            <AniLink cover bg="#151616" direction="right" to="/blog">
+            <AniLink cover bg="#151616" direction="right" to="/portifolio">
               <li>Portifolio</li>
             </AniLink>
             <Link to="*">

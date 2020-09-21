@@ -39,7 +39,7 @@ const Blog: React.FC<Props> = ({ data }) => {
 
   return (
     <Layout>
-      <Head />
+      <Head title={title} />
       <Container>
         <h1>Title: {title}</h1>
         <h3>Date: {date}</h3>

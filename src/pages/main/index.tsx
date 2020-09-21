@@ -48,7 +48,7 @@ const Main: React.FC = () => {
 
   return (
     <Layout>
-      <Head />
+      <Head title="Home" />
       <Container>
         <Frame />
         <Content>
