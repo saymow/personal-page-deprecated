@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 
 import Layout from '../../components/Layout';
 import Head from '../../components/Head';
+import PostBadge from '../../components/PostBadge';
 
 import {
   Container,
@@ -18,7 +19,6 @@ import {
   PostInfoCommands,
   BtnSpan,
 } from './styles';
-import PostBadge from '../../components/PostBadge';
 
 const Blog: React.FC = () => {
   const data = useStaticQuery(graphql`
@@ -34,7 +34,11 @@ const Blog: React.FC = () => {
               image {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid
+                    base64
+                    aspectRatio
+                    src
+                    srcSet
+                    sizes
                   }
                 }
               }
@@ -47,8 +51,14 @@ const Blog: React.FC = () => {
       }
     }
   `);
-
-  console.log(data);
+  // Using fragments manualy, reason being graphql type generator (unable to read them).
+  // fragment GatsbyImageSharpFluid on ImageSharpFluid {
+  //   base64
+  //   aspectRatio
+  //   src
+  //   srcSet
+  //   sizes
+  // }
 
   return (
     <Layout>
