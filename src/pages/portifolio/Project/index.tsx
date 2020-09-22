@@ -42,7 +42,7 @@ const Project: React.FC<IProject> = ({
           <h4>More about</h4>
           <ul>
             {references.map(({ type, url }) => (
-              <li key={url}>
+              <li key={type}>
                 <a href={url}>{referenceIcon[type]}</a>
               </li>
             ))}

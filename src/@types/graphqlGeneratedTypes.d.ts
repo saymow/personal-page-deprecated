@@ -1,7 +1,5 @@
 export type Maybe<T> = T | null;
-export type Exact<T extends { [key: string]: unknown }> = {
-  [K in keyof T]: T[K];
-};
+export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -21,6 +19,7 @@ export type BooleanQueryOperatorInput = {
   in?: Maybe<Array<Maybe<Scalars['Boolean']>>>;
   nin?: Maybe<Array<Maybe<Scalars['Boolean']>>>;
 };
+
 
 export type DateQueryOperatorInput = {
   eq?: Maybe<Scalars['Date']>;
@@ -76,12 +75,14 @@ export type Directory = Node & {
   internal: Internal;
 };
 
+
 export type DirectoryModifiedTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type DirectoryAccessTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -90,12 +91,14 @@ export type DirectoryAccessTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type DirectoryChangeTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type DirectoryBirthTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -104,6 +107,7 @@ export type DirectoryBirthTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type DirectoryAtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -111,12 +115,14 @@ export type DirectoryAtimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type DirectoryMtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type DirectoryCtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -135,9 +141,11 @@ export type DirectoryConnection = {
   group: Array<DirectoryGroupConnection>;
 };
 
+
 export type DirectoryConnectionDistinctArgs = {
   field: DirectoryFieldsEnum;
 };
+
 
 export type DirectoryConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -271,7 +279,7 @@ export enum DirectoryFieldsEnum {
   InternalIgnoreType = 'internal___ignoreType',
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
-  InternalType = 'internal___type',
+  InternalType = 'internal___type'
 }
 
 export type DirectoryFilterInput = {
@@ -380,7 +388,9 @@ export type File = Node & {
   children: Array<Node>;
   internal: Internal;
   childMarkdownRemark?: Maybe<MarkdownRemark>;
+  childPersonalJson?: Maybe<PersonalJson>;
 };
+
 
 export type FileModifiedTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -389,12 +399,14 @@ export type FileModifiedTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type FileAccessTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type FileChangeTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -403,12 +415,14 @@ export type FileChangeTimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type FileBirthTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type FileAtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -417,12 +431,14 @@ export type FileAtimeArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
 export type FileMtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
 };
+
 
 export type FileCtimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -441,9 +457,11 @@ export type FileConnection = {
   group: Array<FileGroupConnection>;
 };
 
+
 export type FileConnectionDistinctArgs = {
   field: FileFieldsEnum;
 };
+
 
 export type FileConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -764,6 +782,55 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkInternalMediaType = 'childMarkdownRemark___internal___mediaType',
   ChildMarkdownRemarkInternalOwner = 'childMarkdownRemark___internal___owner',
   ChildMarkdownRemarkInternalType = 'childMarkdownRemark___internal___type',
+  ChildPersonalJsonId = 'childPersonalJson___id',
+  ChildPersonalJsonParentId = 'childPersonalJson___parent___id',
+  ChildPersonalJsonParentParentId = 'childPersonalJson___parent___parent___id',
+  ChildPersonalJsonParentParentChildren = 'childPersonalJson___parent___parent___children',
+  ChildPersonalJsonParentChildren = 'childPersonalJson___parent___children',
+  ChildPersonalJsonParentChildrenId = 'childPersonalJson___parent___children___id',
+  ChildPersonalJsonParentChildrenChildren = 'childPersonalJson___parent___children___children',
+  ChildPersonalJsonParentInternalContent = 'childPersonalJson___parent___internal___content',
+  ChildPersonalJsonParentInternalContentDigest = 'childPersonalJson___parent___internal___contentDigest',
+  ChildPersonalJsonParentInternalDescription = 'childPersonalJson___parent___internal___description',
+  ChildPersonalJsonParentInternalFieldOwners = 'childPersonalJson___parent___internal___fieldOwners',
+  ChildPersonalJsonParentInternalIgnoreType = 'childPersonalJson___parent___internal___ignoreType',
+  ChildPersonalJsonParentInternalMediaType = 'childPersonalJson___parent___internal___mediaType',
+  ChildPersonalJsonParentInternalOwner = 'childPersonalJson___parent___internal___owner',
+  ChildPersonalJsonParentInternalType = 'childPersonalJson___parent___internal___type',
+  ChildPersonalJsonChildren = 'childPersonalJson___children',
+  ChildPersonalJsonChildrenId = 'childPersonalJson___children___id',
+  ChildPersonalJsonChildrenParentId = 'childPersonalJson___children___parent___id',
+  ChildPersonalJsonChildrenParentChildren = 'childPersonalJson___children___parent___children',
+  ChildPersonalJsonChildrenChildren = 'childPersonalJson___children___children',
+  ChildPersonalJsonChildrenChildrenId = 'childPersonalJson___children___children___id',
+  ChildPersonalJsonChildrenChildrenChildren = 'childPersonalJson___children___children___children',
+  ChildPersonalJsonChildrenInternalContent = 'childPersonalJson___children___internal___content',
+  ChildPersonalJsonChildrenInternalContentDigest = 'childPersonalJson___children___internal___contentDigest',
+  ChildPersonalJsonChildrenInternalDescription = 'childPersonalJson___children___internal___description',
+  ChildPersonalJsonChildrenInternalFieldOwners = 'childPersonalJson___children___internal___fieldOwners',
+  ChildPersonalJsonChildrenInternalIgnoreType = 'childPersonalJson___children___internal___ignoreType',
+  ChildPersonalJsonChildrenInternalMediaType = 'childPersonalJson___children___internal___mediaType',
+  ChildPersonalJsonChildrenInternalOwner = 'childPersonalJson___children___internal___owner',
+  ChildPersonalJsonChildrenInternalType = 'childPersonalJson___children___internal___type',
+  ChildPersonalJsonInternalContent = 'childPersonalJson___internal___content',
+  ChildPersonalJsonInternalContentDigest = 'childPersonalJson___internal___contentDigest',
+  ChildPersonalJsonInternalDescription = 'childPersonalJson___internal___description',
+  ChildPersonalJsonInternalFieldOwners = 'childPersonalJson___internal___fieldOwners',
+  ChildPersonalJsonInternalIgnoreType = 'childPersonalJson___internal___ignoreType',
+  ChildPersonalJsonInternalMediaType = 'childPersonalJson___internal___mediaType',
+  ChildPersonalJsonInternalOwner = 'childPersonalJson___internal___owner',
+  ChildPersonalJsonInternalType = 'childPersonalJson___internal___type',
+  ChildPersonalJsonTitle = 'childPersonalJson___title',
+  ChildPersonalJsonDescriptionEn = 'childPersonalJson___description___en',
+  ChildPersonalJsonDescriptionPt = 'childPersonalJson___description___pt',
+  ChildPersonalJsonReferences = 'childPersonalJson___references',
+  ChildPersonalJsonReferencesType = 'childPersonalJson___references___type',
+  ChildPersonalJsonReferencesUrl = 'childPersonalJson___references___url',
+  ChildPersonalJsonTechsUsed = 'childPersonalJson___techsUsed',
+  ChildPersonalJsonTechsUsedField = 'childPersonalJson___techsUsed___field',
+  ChildPersonalJsonTechsUsedTecnologies = 'childPersonalJson___techsUsed___tecnologies',
+  ChildPersonalJsonTechsUsedTecnologiesName = 'childPersonalJson___techsUsed___tecnologies___name',
+  ChildPersonalJsonTechsUsedTecnologiesUrl = 'childPersonalJson___techsUsed___tecnologies___url'
 }
 
 export type FileFilterInput = {
@@ -807,6 +874,7 @@ export type FileFilterInput = {
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
   childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
+  childPersonalJson?: Maybe<PersonalJsonFilterInput>;
 };
 
 export type FileGroupConnection = {
@@ -846,7 +914,7 @@ export enum ImageCropFocus {
   West = 'WEST',
   Northwest = 'NORTHWEST',
   Entropy = 'ENTROPY',
-  Attention = 'ATTENTION',
+  Attention = 'ATTENTION'
 }
 
 export enum ImageFit {
@@ -854,14 +922,14 @@ export enum ImageFit {
   Contain = 'CONTAIN',
   Fill = 'FILL',
   Inside = 'INSIDE',
-  Outside = 'OUTSIDE',
+  Outside = 'OUTSIDE'
 }
 
 export enum ImageFormat {
   NoChange = 'NO_CHANGE',
   Jpg = 'JPG',
   Png = 'PNG',
-  Webp = 'WEBP',
+  Webp = 'WEBP'
 }
 
 export type ImageSharp = Node & {
@@ -879,6 +947,7 @@ export type ImageSharp = Node & {
   children: Array<Node>;
   internal: Internal;
 };
+
 
 export type ImageSharpFixedArgs = {
   width?: Maybe<Scalars['Int']>;
@@ -902,6 +971,7 @@ export type ImageSharpFixedArgs = {
   trim?: Maybe<Scalars['Float']>;
 };
 
+
 export type ImageSharpResolutionsArgs = {
   width?: Maybe<Scalars['Int']>;
   height?: Maybe<Scalars['Int']>;
@@ -923,6 +993,7 @@ export type ImageSharpResolutionsArgs = {
   rotate?: Maybe<Scalars['Int']>;
   trim?: Maybe<Scalars['Float']>;
 };
+
 
 export type ImageSharpFluidArgs = {
   maxWidth?: Maybe<Scalars['Int']>;
@@ -948,6 +1019,7 @@ export type ImageSharpFluidArgs = {
   srcSetBreakpoints?: Maybe<Array<Maybe<Scalars['Int']>>>;
 };
 
+
 export type ImageSharpSizesArgs = {
   maxWidth?: Maybe<Scalars['Int']>;
   maxHeight?: Maybe<Scalars['Int']>;
@@ -971,6 +1043,7 @@ export type ImageSharpSizesArgs = {
   sizes?: Maybe<Scalars['String']>;
   srcSetBreakpoints?: Maybe<Array<Maybe<Scalars['Int']>>>;
 };
+
 
 export type ImageSharpResizeArgs = {
   width?: Maybe<Scalars['Int']>;
@@ -1004,9 +1077,11 @@ export type ImageSharpConnection = {
   group: Array<ImageSharpGroupConnection>;
 };
 
+
 export type ImageSharpConnectionDistinctArgs = {
   field: ImageSharpFieldsEnum;
 };
+
 
 export type ImageSharpConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -1160,7 +1235,7 @@ export enum ImageSharpFieldsEnum {
   InternalIgnoreType = 'internal___ignoreType',
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
-  InternalType = 'internal___type',
+  InternalType = 'internal___type'
 }
 
 export type ImageSharpFilterInput = {
@@ -1373,6 +1448,7 @@ export type IntQueryOperatorInput = {
   nin?: Maybe<Array<Maybe<Scalars['Int']>>>;
 };
 
+
 export type JsonQueryOperatorInput = {
   eq?: Maybe<Scalars['JSON']>;
   ne?: Maybe<Scalars['JSON']>;
@@ -1385,7 +1461,7 @@ export type JsonQueryOperatorInput = {
 export enum MarkdownExcerptFormats {
   Plain = 'PLAIN',
   Html = 'HTML',
-  Markdown = 'MARKDOWN',
+  Markdown = 'MARKDOWN'
 }
 
 export type MarkdownHeading = {
@@ -1411,7 +1487,7 @@ export enum MarkdownHeadingLevels {
   H3 = 'h3',
   H4 = 'h4',
   H5 = 'h5',
-  H6 = 'h6',
+  H6 = 'h6'
 }
 
 export type MarkdownRemark = Node & {
@@ -1434,20 +1510,24 @@ export type MarkdownRemark = Node & {
   internal: Internal;
 };
 
+
 export type MarkdownRemarkExcerptArgs = {
   pruneLength?: Maybe<Scalars['Int']>;
   truncate?: Maybe<Scalars['Boolean']>;
   format?: Maybe<MarkdownExcerptFormats>;
 };
 
+
 export type MarkdownRemarkExcerptAstArgs = {
   pruneLength?: Maybe<Scalars['Int']>;
   truncate?: Maybe<Scalars['Boolean']>;
 };
 
+
 export type MarkdownRemarkHeadingsArgs = {
   depth?: Maybe<MarkdownHeadingLevels>;
 };
+
 
 export type MarkdownRemarkTableOfContentsArgs = {
   absolute?: Maybe<Scalars['Boolean']>;
@@ -1466,9 +1546,11 @@ export type MarkdownRemarkConnection = {
   group: Array<MarkdownRemarkGroupConnection>;
 };
 
+
 export type MarkdownRemarkConnectionDistinctArgs = {
   field: MarkdownRemarkFieldsEnum;
 };
+
 
 export type MarkdownRemarkConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -1554,6 +1636,11 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterImageChildMarkdownRemarkTimeToRead = 'frontmatter___image___childMarkdownRemark___timeToRead',
   FrontmatterImageChildMarkdownRemarkTableOfContents = 'frontmatter___image___childMarkdownRemark___tableOfContents',
   FrontmatterImageChildMarkdownRemarkChildren = 'frontmatter___image___childMarkdownRemark___children',
+  FrontmatterImageChildPersonalJsonId = 'frontmatter___image___childPersonalJson___id',
+  FrontmatterImageChildPersonalJsonChildren = 'frontmatter___image___childPersonalJson___children',
+  FrontmatterImageChildPersonalJsonTitle = 'frontmatter___image___childPersonalJson___title',
+  FrontmatterImageChildPersonalJsonReferences = 'frontmatter___image___childPersonalJson___references',
+  FrontmatterImageChildPersonalJsonTechsUsed = 'frontmatter___image___childPersonalJson___techsUsed',
   FrontmatterTags = 'frontmatter___tags',
   Excerpt = 'excerpt',
   RawMarkdownBody = 'rawMarkdownBody',
@@ -1655,7 +1742,7 @@ export enum MarkdownRemarkFieldsEnum {
   InternalIgnoreType = 'internal___ignoreType',
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
-  InternalType = 'internal___type',
+  InternalType = 'internal___type'
 }
 
 export type MarkdownRemarkFieldsFilterInput = {
@@ -1756,6 +1843,229 @@ export type PageInfo = {
   totalCount: Scalars['Int'];
 };
 
+export type PersonalJson = Node & {
+  __typename?: 'PersonalJson';
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<PersonalJsonDescription>;
+  references?: Maybe<Array<Maybe<PersonalJsonReferences>>>;
+  techsUsed?: Maybe<Array<Maybe<PersonalJsonTechsUsed>>>;
+};
+
+export type PersonalJsonConnection = {
+  __typename?: 'PersonalJsonConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<PersonalJsonEdge>;
+  nodes: Array<PersonalJson>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<PersonalJsonGroupConnection>;
+};
+
+
+export type PersonalJsonConnectionDistinctArgs = {
+  field: PersonalJsonFieldsEnum;
+};
+
+
+export type PersonalJsonConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: PersonalJsonFieldsEnum;
+};
+
+export type PersonalJsonDescription = {
+  __typename?: 'PersonalJsonDescription';
+  en?: Maybe<Scalars['String']>;
+  pt?: Maybe<Scalars['String']>;
+};
+
+export type PersonalJsonDescriptionFilterInput = {
+  en?: Maybe<StringQueryOperatorInput>;
+  pt?: Maybe<StringQueryOperatorInput>;
+};
+
+export type PersonalJsonEdge = {
+  __typename?: 'PersonalJsonEdge';
+  next?: Maybe<PersonalJson>;
+  node: PersonalJson;
+  previous?: Maybe<PersonalJson>;
+};
+
+export enum PersonalJsonFieldsEnum {
+  Id = 'id',
+  ParentId = 'parent___id',
+  ParentParentId = 'parent___parent___id',
+  ParentParentParentId = 'parent___parent___parent___id',
+  ParentParentParentChildren = 'parent___parent___parent___children',
+  ParentParentChildren = 'parent___parent___children',
+  ParentParentChildrenId = 'parent___parent___children___id',
+  ParentParentChildrenChildren = 'parent___parent___children___children',
+  ParentParentInternalContent = 'parent___parent___internal___content',
+  ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalDescription = 'parent___parent___internal___description',
+  ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
+  ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
+  ParentParentInternalMediaType = 'parent___parent___internal___mediaType',
+  ParentParentInternalOwner = 'parent___parent___internal___owner',
+  ParentParentInternalType = 'parent___parent___internal___type',
+  ParentChildren = 'parent___children',
+  ParentChildrenId = 'parent___children___id',
+  ParentChildrenParentId = 'parent___children___parent___id',
+  ParentChildrenParentChildren = 'parent___children___parent___children',
+  ParentChildrenChildren = 'parent___children___children',
+  ParentChildrenChildrenId = 'parent___children___children___id',
+  ParentChildrenChildrenChildren = 'parent___children___children___children',
+  ParentChildrenInternalContent = 'parent___children___internal___content',
+  ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalDescription = 'parent___children___internal___description',
+  ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
+  ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
+  ParentChildrenInternalMediaType = 'parent___children___internal___mediaType',
+  ParentChildrenInternalOwner = 'parent___children___internal___owner',
+  ParentChildrenInternalType = 'parent___children___internal___type',
+  ParentInternalContent = 'parent___internal___content',
+  ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalDescription = 'parent___internal___description',
+  ParentInternalFieldOwners = 'parent___internal___fieldOwners',
+  ParentInternalIgnoreType = 'parent___internal___ignoreType',
+  ParentInternalMediaType = 'parent___internal___mediaType',
+  ParentInternalOwner = 'parent___internal___owner',
+  ParentInternalType = 'parent___internal___type',
+  Children = 'children',
+  ChildrenId = 'children___id',
+  ChildrenParentId = 'children___parent___id',
+  ChildrenParentParentId = 'children___parent___parent___id',
+  ChildrenParentParentChildren = 'children___parent___parent___children',
+  ChildrenParentChildren = 'children___parent___children',
+  ChildrenParentChildrenId = 'children___parent___children___id',
+  ChildrenParentChildrenChildren = 'children___parent___children___children',
+  ChildrenParentInternalContent = 'children___parent___internal___content',
+  ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalDescription = 'children___parent___internal___description',
+  ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
+  ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
+  ChildrenParentInternalMediaType = 'children___parent___internal___mediaType',
+  ChildrenParentInternalOwner = 'children___parent___internal___owner',
+  ChildrenParentInternalType = 'children___parent___internal___type',
+  ChildrenChildren = 'children___children',
+  ChildrenChildrenId = 'children___children___id',
+  ChildrenChildrenParentId = 'children___children___parent___id',
+  ChildrenChildrenParentChildren = 'children___children___parent___children',
+  ChildrenChildrenChildren = 'children___children___children',
+  ChildrenChildrenChildrenId = 'children___children___children___id',
+  ChildrenChildrenChildrenChildren = 'children___children___children___children',
+  ChildrenChildrenInternalContent = 'children___children___internal___content',
+  ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalDescription = 'children___children___internal___description',
+  ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
+  ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
+  ChildrenChildrenInternalMediaType = 'children___children___internal___mediaType',
+  ChildrenChildrenInternalOwner = 'children___children___internal___owner',
+  ChildrenChildrenInternalType = 'children___children___internal___type',
+  ChildrenInternalContent = 'children___internal___content',
+  ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalDescription = 'children___internal___description',
+  ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
+  ChildrenInternalIgnoreType = 'children___internal___ignoreType',
+  ChildrenInternalMediaType = 'children___internal___mediaType',
+  ChildrenInternalOwner = 'children___internal___owner',
+  ChildrenInternalType = 'children___internal___type',
+  InternalContent = 'internal___content',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalFieldOwners = 'internal___fieldOwners',
+  InternalIgnoreType = 'internal___ignoreType',
+  InternalMediaType = 'internal___mediaType',
+  InternalOwner = 'internal___owner',
+  InternalType = 'internal___type',
+  Title = 'title',
+  DescriptionEn = 'description___en',
+  DescriptionPt = 'description___pt',
+  References = 'references',
+  ReferencesType = 'references___type',
+  ReferencesUrl = 'references___url',
+  TechsUsed = 'techsUsed',
+  TechsUsedField = 'techsUsed___field',
+  TechsUsedTecnologies = 'techsUsed___tecnologies',
+  TechsUsedTecnologiesName = 'techsUsed___tecnologies___name',
+  TechsUsedTecnologiesUrl = 'techsUsed___tecnologies___url'
+}
+
+export type PersonalJsonFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<PersonalJsonDescriptionFilterInput>;
+  references?: Maybe<PersonalJsonReferencesFilterListInput>;
+  techsUsed?: Maybe<PersonalJsonTechsUsedFilterListInput>;
+};
+
+export type PersonalJsonGroupConnection = {
+  __typename?: 'PersonalJsonGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<PersonalJsonEdge>;
+  nodes: Array<PersonalJson>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type PersonalJsonReferences = {
+  __typename?: 'PersonalJsonReferences';
+  type?: Maybe<Scalars['String']>;
+  url?: Maybe<Scalars['String']>;
+};
+
+export type PersonalJsonReferencesFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  url?: Maybe<StringQueryOperatorInput>;
+};
+
+export type PersonalJsonReferencesFilterListInput = {
+  elemMatch?: Maybe<PersonalJsonReferencesFilterInput>;
+};
+
+export type PersonalJsonSortInput = {
+  fields?: Maybe<Array<Maybe<PersonalJsonFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type PersonalJsonTechsUsed = {
+  __typename?: 'PersonalJsonTechsUsed';
+  field?: Maybe<Scalars['String']>;
+  tecnologies?: Maybe<Array<Maybe<PersonalJsonTechsUsedTecnologies>>>;
+};
+
+export type PersonalJsonTechsUsedFilterInput = {
+  field?: Maybe<StringQueryOperatorInput>;
+  tecnologies?: Maybe<PersonalJsonTechsUsedTecnologiesFilterListInput>;
+};
+
+export type PersonalJsonTechsUsedFilterListInput = {
+  elemMatch?: Maybe<PersonalJsonTechsUsedFilterInput>;
+};
+
+export type PersonalJsonTechsUsedTecnologies = {
+  __typename?: 'PersonalJsonTechsUsedTecnologies';
+  name?: Maybe<Scalars['String']>;
+  url?: Maybe<Scalars['String']>;
+};
+
+export type PersonalJsonTechsUsedTecnologiesFilterInput = {
+  name?: Maybe<StringQueryOperatorInput>;
+  url?: Maybe<StringQueryOperatorInput>;
+};
+
+export type PersonalJsonTechsUsedTecnologiesFilterListInput = {
+  elemMatch?: Maybe<PersonalJsonTechsUsedTecnologiesFilterInput>;
+};
+
 export type Potrace = {
   turnPolicy?: Maybe<PotraceTurnPolicy>;
   turdSize?: Maybe<Scalars['Float']>;
@@ -1774,7 +2084,7 @@ export enum PotraceTurnPolicy {
   TurnpolicyLeft = 'TURNPOLICY_LEFT',
   TurnpolicyRight = 'TURNPOLICY_RIGHT',
   TurnpolicyMinority = 'TURNPOLICY_MINORITY',
-  TurnpolicyMajority = 'TURNPOLICY_MAJORITY',
+  TurnpolicyMajority = 'TURNPOLICY_MAJORITY'
 }
 
 export type Query = {
@@ -1791,11 +2101,14 @@ export type Query = {
   allImageSharp: ImageSharpConnection;
   markdownRemark?: Maybe<MarkdownRemark>;
   allMarkdownRemark: MarkdownRemarkConnection;
+  personalJson?: Maybe<PersonalJson>;
+  allPersonalJson: PersonalJsonConnection;
   siteBuildMetadata?: Maybe<SiteBuildMetadata>;
   allSiteBuildMetadata: SiteBuildMetadataConnection;
   sitePlugin?: Maybe<SitePlugin>;
   allSitePlugin: SitePluginConnection;
 };
+
 
 export type QueryFileArgs = {
   sourceInstanceName?: Maybe<StringQueryOperatorInput>;
@@ -1838,7 +2151,9 @@ export type QueryFileArgs = {
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
   childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
+  childPersonalJson?: Maybe<PersonalJsonFilterInput>;
 };
+
 
 export type QueryAllFileArgs = {
   filter?: Maybe<FileFilterInput>;
@@ -1846,6 +2161,7 @@ export type QueryAllFileArgs = {
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryDirectoryArgs = {
   sourceInstanceName?: Maybe<StringQueryOperatorInput>;
@@ -1887,12 +2203,14 @@ export type QueryDirectoryArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllDirectoryArgs = {
   filter?: Maybe<DirectoryFilterInput>;
   sort?: Maybe<DirectorySortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
@@ -1907,12 +2225,14 @@ export type QuerySiteArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSiteArgs = {
   filter?: Maybe<SiteFilterInput>;
   sort?: Maybe<SiteSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySitePageArgs = {
   path?: Maybe<StringQueryOperatorInput>;
@@ -1931,12 +2251,14 @@ export type QuerySitePageArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllSitePageArgs = {
   filter?: Maybe<SitePageFilterInput>;
   sort?: Maybe<SitePageSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryImageSharpArgs = {
   fixed?: Maybe<ImageSharpFixedFilterInput>;
@@ -1951,12 +2273,14 @@ export type QueryImageSharpArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllImageSharpArgs = {
   filter?: Maybe<ImageSharpFilterInput>;
   sort?: Maybe<ImageSharpSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QueryMarkdownRemarkArgs = {
   id?: Maybe<StringQueryOperatorInput>;
@@ -1977,12 +2301,34 @@ export type QueryMarkdownRemarkArgs = {
   internal?: Maybe<InternalFilterInput>;
 };
 
+
 export type QueryAllMarkdownRemarkArgs = {
   filter?: Maybe<MarkdownRemarkFilterInput>;
   sort?: Maybe<MarkdownRemarkSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
+
+export type QueryPersonalJsonArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<PersonalJsonDescriptionFilterInput>;
+  references?: Maybe<PersonalJsonReferencesFilterListInput>;
+  techsUsed?: Maybe<PersonalJsonTechsUsedFilterListInput>;
+};
+
+
+export type QueryAllPersonalJsonArgs = {
+  filter?: Maybe<PersonalJsonFilterInput>;
+  sort?: Maybe<PersonalJsonSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
 
 export type QuerySiteBuildMetadataArgs = {
   id?: Maybe<StringQueryOperatorInput>;
@@ -1992,12 +2338,14 @@ export type QuerySiteBuildMetadataArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
 };
 
+
 export type QueryAllSiteBuildMetadataArgs = {
   filter?: Maybe<SiteBuildMetadataFilterInput>;
   sort?: Maybe<SiteBuildMetadataSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
+
 
 export type QuerySitePluginArgs = {
   id?: Maybe<StringQueryOperatorInput>;
@@ -2014,6 +2362,7 @@ export type QuerySitePluginArgs = {
   pluginFilepath?: Maybe<StringQueryOperatorInput>;
   packageJson?: Maybe<SitePluginPackageJsonFilterInput>;
 };
+
 
 export type QueryAllSitePluginArgs = {
   filter?: Maybe<SitePluginFilterInput>;
@@ -2036,6 +2385,7 @@ export type Site = Node & {
   internal: Internal;
 };
 
+
 export type SiteBuildTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
@@ -2051,6 +2401,7 @@ export type SiteBuildMetadata = Node & {
   internal: Internal;
   buildTime?: Maybe<Scalars['Date']>;
 };
+
 
 export type SiteBuildMetadataBuildTimeArgs = {
   formatString?: Maybe<Scalars['String']>;
@@ -2069,9 +2420,11 @@ export type SiteBuildMetadataConnection = {
   group: Array<SiteBuildMetadataGroupConnection>;
 };
 
+
 export type SiteBuildMetadataConnectionDistinctArgs = {
   field: SiteBuildMetadataFieldsEnum;
 };
+
 
 export type SiteBuildMetadataConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -2173,7 +2526,7 @@ export enum SiteBuildMetadataFieldsEnum {
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
-  BuildTime = 'buildTime',
+  BuildTime = 'buildTime'
 }
 
 export type SiteBuildMetadataFilterInput = {
@@ -2209,9 +2562,11 @@ export type SiteConnection = {
   group: Array<SiteGroupConnection>;
 };
 
+
 export type SiteConnectionDistinctArgs = {
   field: SiteFieldsEnum;
 };
+
 
 export type SiteConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -2320,7 +2675,7 @@ export enum SiteFieldsEnum {
   InternalIgnoreType = 'internal___ignoreType',
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
-  InternalType = 'internal___type',
+  InternalType = 'internal___type'
 }
 
 export type SiteFilterInput = {
@@ -2374,9 +2729,11 @@ export type SitePageConnection = {
   group: Array<SitePageGroupConnection>;
 };
 
+
 export type SitePageConnectionDistinctArgs = {
   field: SitePageFieldsEnum;
 };
+
 
 export type SitePageConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -2569,7 +2926,7 @@ export enum SitePageFieldsEnum {
   InternalIgnoreType = 'internal___ignoreType',
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
-  InternalType = 'internal___type',
+  InternalType = 'internal___type'
 }
 
 export type SitePageFilterInput = {
@@ -2631,9 +2988,11 @@ export type SitePluginConnection = {
   group: Array<SitePluginGroupConnection>;
 };
 
+
 export type SitePluginConnectionDistinctArgs = {
   field: SitePluginFieldsEnum;
 };
+
 
 export type SitePluginConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
@@ -2773,7 +3132,7 @@ export enum SitePluginFieldsEnum {
   PackageJsonPeerDependencies = 'packageJson___peerDependencies',
   PackageJsonPeerDependenciesName = 'packageJson___peerDependencies___name',
   PackageJsonPeerDependenciesVersion = 'packageJson___peerDependencies___version',
-  PackageJsonKeywords = 'packageJson___keywords',
+  PackageJsonKeywords = 'packageJson___keywords'
 }
 
 export type SitePluginFilterInput = {
@@ -2853,9 +3212,7 @@ export type SitePluginPackageJsonFilterInput = {
   license?: Maybe<StringQueryOperatorInput>;
   dependencies?: Maybe<SitePluginPackageJsonDependenciesFilterListInput>;
   devDependencies?: Maybe<SitePluginPackageJsonDevDependenciesFilterListInput>;
-  peerDependencies?: Maybe<
-    SitePluginPackageJsonPeerDependenciesFilterListInput
-  >;
+  peerDependencies?: Maybe<SitePluginPackageJsonPeerDependenciesFilterListInput>;
   keywords?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -2960,7 +3317,7 @@ export type SiteSortInput = {
 
 export enum SortOrderEnum {
   Asc = 'ASC',
-  Desc = 'DESC',
+  Desc = 'DESC'
 }
 
 export type StringQueryOperatorInput = {
@@ -2972,78 +3329,33 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never }>;
+export type PersonalProjectsJsonQueryVariables = Exact<{ [key: string]: never; }>;
 
-export type Unnamed_1_Query = { __typename?: 'Query' } & {
-  site?: Maybe<
-    { __typename?: 'Site' } & {
-      siteMetadata?: Maybe<
-        { __typename?: 'SiteSiteMetadata' } & Pick<
-          SiteSiteMetadata,
-          'title' | 'author'
-        >
-      >;
-    }
-  >;
-};
 
-export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never }>;
-
-export type Unnamed_2_Query = { __typename?: 'Query' } & {
-  allMarkdownRemark: { __typename?: 'MarkdownRemarkConnection' } & {
-    edges: Array<
-      { __typename?: 'MarkdownRemarkEdge' } & {
-        node: { __typename?: 'MarkdownRemark' } & {
-          frontmatter?: Maybe<
-            { __typename?: 'MarkdownRemarkFrontmatter' } & Pick<
-              MarkdownRemarkFrontmatter,
-              'title' | 'date' | 'description' | 'tags'
-            > & {
-                image?: Maybe<
-                  { __typename?: 'File' } & {
-                    childImageSharp?: Maybe<
-                      { __typename?: 'ImageSharp' } & {
-                        fluid?: Maybe<
-                          { __typename?: 'ImageSharpFluid' } & Pick<
-                            ImageSharpFluid,
-                            | 'base64'
-                            | 'aspectRatio'
-                            | 'src'
-                            | 'srcSet'
-                            | 'sizes'
-                          >
-                        >;
-                      }
-                    >;
-                  }
-                >;
-              }
-          >;
-          fields?: Maybe<
-            { __typename?: 'MarkdownRemarkFields' } & Pick<
-              MarkdownRemarkFields,
-              'slug'
-            >
-          >;
-        };
-      }
-    >;
-  };
-};
-
-export type Unnamed_3_QueryVariables = Exact<{
-  slug?: Maybe<Scalars['String']>;
-}>;
-
-export type Unnamed_3_Query = { __typename?: 'Query' } & {
-  markdownRemark?: Maybe<
-    { __typename?: 'MarkdownRemark' } & Pick<MarkdownRemark, 'html'> & {
-        frontmatter?: Maybe<
-          { __typename?: 'MarkdownRemarkFrontmatter' } & Pick<
-            MarkdownRemarkFrontmatter,
-            'title' | 'date'
-          >
-        >;
-      }
-  >;
-};
+export type PersonalProjectsJsonQuery = (
+  { __typename?: 'Query' }
+  & { allPersonalJson: (
+    { __typename?: 'PersonalJsonConnection' }
+    & { edges: Array<(
+      { __typename?: 'PersonalJsonEdge' }
+      & { node: (
+        { __typename?: 'PersonalJson' }
+        & Pick<PersonalJson, 'title'>
+        & { description?: Maybe<(
+          { __typename?: 'PersonalJsonDescription' }
+          & Pick<PersonalJsonDescription, 'en' | 'pt'>
+        )>, references?: Maybe<Array<Maybe<(
+          { __typename?: 'PersonalJsonReferences' }
+          & Pick<PersonalJsonReferences, 'type' | 'url'>
+        )>>>, techsUsed?: Maybe<Array<Maybe<(
+          { __typename?: 'PersonalJsonTechsUsed' }
+          & Pick<PersonalJsonTechsUsed, 'field'>
+          & { tecnologies?: Maybe<Array<Maybe<(
+            { __typename?: 'PersonalJsonTechsUsedTecnologies' }
+            & Pick<PersonalJsonTechsUsedTecnologies, 'name' | 'url'>
+          )>>> }
+        )>>> }
+      ) }
+    )> }
+  ) }
+);

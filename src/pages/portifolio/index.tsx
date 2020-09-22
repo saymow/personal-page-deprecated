@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby';
 import React from 'react';
 
 import Head from '../../components/Head';
@@ -12,7 +13,13 @@ import {
   ProjectsList,
 } from './styles';
 
-const Portifolio: React.FC = () => {
+interface Props {
+  data: any;
+}
+
+const Portifolio: React.FC<Props> = ({ data }) => {
+  console.log(data);
+
   return (
     <Layout>
       <Head title="Portifolio" />
@@ -21,58 +28,17 @@ const Portifolio: React.FC = () => {
         <Section>
           <SectionTitle>Personal</SectionTitle>
           <ProjectsList>
-            <li>
-              <Project
-                title="Flash cards"
-                thumbnailUrl="https://images.unsplash.com/photo-1599687349533-82f24a0b62cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
-                description={{
-                  en:
-                    'My first fullstack project. A Fibonnaci based flash card application made during cs50 course.',
-                  pt:
-                    'Meu primeiro projeto fullstack. Uma aplicação de flashcards baseado na sequência de Fibonnaci, feita durante cs50.',
-                }}
-                references={[
-                  { type: 'Github', url: 'example.com' },
-                  { type: 'Netlify', url: 'example.com' },
-                ]}
-                techsUsed={[
-                  {
-                    field: 'Web',
-                    tecnologies: [
-                      {
-                        name: 'React',
-                        url: 'todo.todo',
-                      },
-                      {
-                        name: 'Axios',
-                        url: 'todo.todo',
-                      },
-                      {
-                        name: 'Styled-components',
-                        url: 'todo.todo',
-                      },
-                    ],
-                  },
-                  {
-                    field: 'Server',
-                    tecnologies: [
-                      {
-                        name: 'Node',
-                        url: 'todo.todo',
-                      },
-                      {
-                        name: 'Express',
-                        url: 'todo.todo',
-                      },
-                      {
-                        name: 'Knex',
-                        url: 'todo.todo',
-                      },
-                    ],
-                  },
-                ]}
-              />
-            </li>
+            {data.allPersonalJson.edges.map(({ node }) => (
+              <li>
+                <Project
+                  title={node.title}
+                  thumbnailUrl="https://images.unsplash.com/photo-1599687349533-82f24a0b62cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+                  description={node.description}
+                  references={node.references}
+                  techsUsed={node.techsUsed}
+                />
+              </li>
+            ))}
           </ProjectsList>
         </Section>
         <Section>
@@ -83,5 +49,32 @@ const Portifolio: React.FC = () => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  {
+    allPersonalJson {
+      edges {
+        node {
+          title
+          description {
+            en
+            pt
+          }
+          references {
+            type
+            url
+          }
+          techsUsed {
+            field
+            tecnologies {
+              name
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default Portifolio;
