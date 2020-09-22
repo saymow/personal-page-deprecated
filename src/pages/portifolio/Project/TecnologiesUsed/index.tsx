@@ -2,21 +2,17 @@ import React from 'react';
 
 import { Container, TecnologiesList } from './styles';
 
+import { IProjectTechs } from '../../../../@Types/Project';
+
 interface Props {
-  tecnlogiesUsed: {
-    field: string;
-    tecnologies: {
-      name: string;
-      url: string;
-    }[];
-  }[];
+  techsUsed: IProjectTechs;
 }
 
-const TecnologiesUsed: React.FC<Props> = ({ tecnlogiesUsed }) => {
+const TecnologiesUsed: React.FC<Props> = ({ techsUsed }) => {
   return (
     <Container>
       <h4>Techs </h4>
-      {tecnlogiesUsed.map(({ field, tecnologies }) => (
+      {techsUsed.map(({ field, tecnologies }) => (
         <section key={field}>
           <h5>{field}</h5>
           <TecnologiesList>

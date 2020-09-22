@@ -4,9 +4,6 @@ export const Container = styled.div`
   overflow: hidden;
   background: rgba(0, 0, 0, 0.8);
 
-  display: flex;
-  flex-direction: column;
-
   h4 {
     font-size: 2.4rem;
     text-transform: uppercase;
