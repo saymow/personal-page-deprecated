@@ -5,6 +5,26 @@ import { Container } from './styles';
 import Layout from '../../components/Layout';
 import Head from '../../components/Head';
 
+const Blog: React.FC<Props> = ({ data }) => {
+  const {
+    markdownRemark: {
+      frontmatter: { title, date },
+      html,
+    },
+  } = data;
+
+  return (
+    <Layout>
+      <Head title={title} />
+      <Container>
+        <h1>Title: {title}</h1>
+        <h3>Date: {date}</h3>
+        <div dangerouslySetInnerHTML={{ __html: html }}></div>
+      </Container>
+    </Layout>
+  );
+};
+
 export const query = graphql`
   query($slug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -28,25 +48,5 @@ interface Props extends React.FC {
     };
   };
 }
-
-const Blog: React.FC<Props> = ({ data }) => {
-  const {
-    markdownRemark: {
-      frontmatter: { title, date },
-      html,
-    },
-  } = data;
-
-  return (
-    <Layout>
-      <Head title={title} />
-      <Container>
-        <h1>Title: {title}</h1>
-        <h3>Date: {date}</h3>
-        <div dangerouslySetInnerHTML={{ __html: html }}></div>
-      </Container>
-    </Layout>
-  );
-};
 
 export default Blog;

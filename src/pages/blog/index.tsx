@@ -20,46 +20,7 @@ import {
   BtnSpan,
 } from './styles';
 
-const Blog: React.FC = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              title
-              date
-              description
-              tags
-              image {
-                childImageSharp {
-                  fluid {
-                    base64
-                    aspectRatio
-                    src
-                    srcSet
-                    sizes
-                  }
-                }
-              }
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `);
-  // Using fragments manualy, reason being graphql type generator (unable to read them).
-  // fragment GatsbyImageSharpFluid on ImageSharpFluid {
-  //   base64
-  //   aspectRatio
-  //   src
-  //   srcSet
-  //   sizes
-  // }
-
+const Blog: React.FC<Props> = ({ data }) => {
   return (
     <Layout>
       <Head title="Blog" />
@@ -187,5 +148,49 @@ const Blog: React.FC = () => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+            description
+            tags
+            image {
+              childImageSharp {
+                fluid {
+                  base64
+                  aspectRatio
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;
+
+// Using fragments manualy, reason being graphql type generator (unable to read them).
+// fragment GatsbyImageSharpFluid on ImageSharpFluid {
+//   base64
+//   aspectRatio
+//   src
+//   srcSet
+//   sizes
+// }
+
+interface Props {
+  data: any;
+}
 
 export default Blog;

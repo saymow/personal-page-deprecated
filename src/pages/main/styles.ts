@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
-
 import { Github, Discord, Linkedin } from 'styled-icons/boxicons-logos';
+
+import { StyledTitle } from '../../styles/shared';
 
 interface Props {
   inverted?: boolean;
@@ -34,23 +35,8 @@ export const Section = styled.section<Props>`
 `;
 
 export const SectionTitle = styled.h2`
-  position: relative;
-  font-size: 4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1cm;
+  ${StyledTitle}
   margin-bottom: 2.5rem;
-
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    width: 30%;
-    height: 0.5rem;
-
-    background: var(--color-purple);
-  }
 `;
 
 export const SectionContent = styled.article`

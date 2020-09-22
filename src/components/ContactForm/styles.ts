@@ -50,7 +50,7 @@ export const Textarea = styled.div`
 
   label {
     line-height: 3rem;
-    color: var(--color-text-secondary) ccc;
+    color: var(--color-text-secondary);
     font-weight: bold;
   }
 

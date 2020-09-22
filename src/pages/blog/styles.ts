@@ -1,21 +1,27 @@
 import styled from 'styled-components';
 
-import { LinkWrapperBtn, HorizontalStyledScroll } from '../../styles/shared';
+import {
+  LinkWrapperBtn,
+  HorizontalStyledScroll,
+  StyledTitle,
+} from '../../styles/shared';
 
 export const Container = styled.div``;
 
 export const PostsSection = styled.section`
+  display: flex;
+  flex-direction: column;
+
   margin: 5rem 0;
 
   h1 {
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 1mm;
+    align-self: flex-start;
+    ${StyledTitle}
   }
 
   ul {
     list-style: none;
-    margin: 0 7em;
+    margin: 3rem 7rem;
     display: flex;
     flex-wrap: wrap;
 
@@ -35,8 +41,8 @@ export const PostArticle = styled.article`
   grid-template-rows: 2fr 3fr;
 
   height: 40rem;
-  background: #292929;
-  box-shadow: 6px 6px 10px 0px rgb(50 48 48);
+  background: var(--color-background-tertiary);
+  box-shadow: var(--boxshadow);
 `;
 
 export const PostFigure = styled.figure`

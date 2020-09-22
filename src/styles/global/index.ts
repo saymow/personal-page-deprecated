@@ -10,11 +10,13 @@ const GlobalStyles = createGlobalStyle<{ theme: themeType }>`
 
     --color-background: ${({ theme }) => theme.background};
     --color-background-secondary: ${({ theme }) => theme.background_secondary};
+    --color-background-tertiary: ${({ theme }) => theme.background_tertiary};
     --color-text: ${({ theme }) => theme.text};
     --color-text-secondary: ${({ theme }) => theme.text_secondary};
     --color-purple: ${({ theme }) => theme.purple};
     --color-green: ${({ theme }) => theme.green};
     --color-green-secondary: ${({ theme }) => theme.green_secondary};
+    --boxshadow: 6px 6px 10px 0px rgb(2 2 2 / 37%);
   }
 
   * {
