@@ -1,5 +1,6 @@
 {
   "title": "Flash cards",
+  "image": "flashcards.jpg",
   "description": {
     "en": "My first fullstack project. A Fibonnaci based flash card application made during cs50 course.",
     "pt": "Meu primeiro projeto fullstack. Uma aplicação de flashcards baseado na sequência de Fibonnaci, feita durante cs50."

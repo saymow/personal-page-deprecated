@@ -1,4 +1,5 @@
 import React from 'react';
+import Img from 'gatsby-image';
 
 import TecnologiesUsed from './TecnologiesUsed';
 
@@ -14,7 +15,7 @@ import {
 
 const Project: React.FC<IProject> = ({
   title,
-  thumbnailUrl,
+  fluidImage,
   description,
   references,
   techsUsed,
@@ -27,9 +28,7 @@ const Project: React.FC<IProject> = ({
   return (
     <Container>
       <TecnologiesUsed techsUsed={techsUsed} />
-      <div>
-        <img src={thumbnailUrl} />
-      </div>
+      <Img fluid={fluidImage} />
       <ProjectInfo>
         <div>
           <h3>{title}</h3>

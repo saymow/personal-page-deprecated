@@ -1,3 +1,5 @@
+import { FluidObject } from 'gatsby-image';
+
 export type IProjectTechs = {
   field: string;
   tecnologies: {
@@ -8,7 +10,7 @@ export type IProjectTechs = {
 
 export interface IProject extends ProjectTechs {
   title: string;
-  thumbnailUrl: string;
+  fluidImage: FluidObject;
   description: {
     pt: string;
     en: string;

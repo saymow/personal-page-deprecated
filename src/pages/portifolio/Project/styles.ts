@@ -15,11 +15,12 @@ export const Container = styled.article`
 
   > div:first-child {
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    max-width: 0px;
+    max-width: 0;
 
     transition: all 200ms ease-in-out;
   }
@@ -30,6 +31,8 @@ export const Container = styled.article`
   }
 
   > div:nth-child(2) {
+    height: 100%;
+    width: 100%;
     overflow: hidden;
   }
 `;

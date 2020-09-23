@@ -32,7 +32,7 @@ const Portifolio: React.FC<Props> = ({ data }) => {
               <li>
                 <Project
                   title={node.title}
-                  thumbnailUrl="https://images.unsplash.com/photo-1599687349533-82f24a0b62cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
+                  fluidImage={node.image.childImageSharp.fluid}
                   description={node.description}
                   references={node.references}
                   techsUsed={node.techsUsed}
@@ -69,6 +69,17 @@ export const query = graphql`
             tecnologies {
               name
               url
+            }
+          }
+          image {
+            childImageSharp {
+              fluid(maxWidth: 400) {
+                base64
+                aspectRatio
+                src
+                srcSet
+                sizes
+              }
             }
           }
         }
