@@ -3,7 +3,7 @@ import React from 'react';
 
 import Head from '../../components/Head';
 import Layout from '../../components/Layout';
-import Project from './Project';
+import Project from '../../components/Project';
 
 import {
   Container,
@@ -11,7 +11,7 @@ import {
   Section,
   SectionTitle,
   ProjectsList,
-} from './styles';
+} from '../../styles/portifolio/styles';
 
 interface Props {
   data: any;

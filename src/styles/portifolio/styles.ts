@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { StyledTitle } from '../../styles/shared';
+import { StyledTitle } from '../shared';
 
 export const Container = styled.div`
   margin: 5rem 0;

@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-import {
-  LinkWrapperBtn,
-  HorizontalStyledScroll,
-  StyledTitle,
-} from '../../styles/shared';
+import { LinkWrapperBtn, HorizontalStyledScroll, StyledTitle } from '../shared';
 
 export const Container = styled.div``;
 

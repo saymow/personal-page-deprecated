@@ -18,7 +18,7 @@ import {
   PostInfoDescription,
   PostInfoCommands,
   BtnSpan,
-} from './styles';
+} from '../../styles/blog/styles';
 
 const Blog: React.FC<Props> = ({ data }) => {
   return (

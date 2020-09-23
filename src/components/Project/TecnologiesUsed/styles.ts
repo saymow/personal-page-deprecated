@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { VerticalStyledScroll } from '../../../../styles/shared';
+import { VerticalStyledScroll } from '../../../styles/shared';
 
 export const Container = styled.div`
   overflow-x: hidden;

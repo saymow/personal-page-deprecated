@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 
 import TecnologiesUsed from './TecnologiesUsed';
 
-import { IProject } from '../../../@Types/Project';
+import { IProject } from '../../@Types/Project';
 
 import {
   Container,

@@ -1,20 +1,18 @@
 import React, { useEffect, useRef } from 'react';
-
 import ContactForm from '../../components/ContactForm';
 import Head from '../../components/Head';
 import Layout from '../../components/Layout';
-import Frame from './Frame';
-
+import Frame from '../../components/Frame';
 import {
   Container,
   Content,
-  Section,
-  SectionTitle,
-  SectionContent,
-  IconsContainer,
   GithubIcon,
+  IconsContainer,
   LinkedinIcon,
-} from './styles';
+  Section,
+  SectionContent,
+  SectionTitle,
+} from '../../styles/main/styles';
 
 const Main: React.FC = () => {
   const sectionsRef = [

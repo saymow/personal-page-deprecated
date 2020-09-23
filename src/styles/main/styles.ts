@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Github, Linkedin } from 'styled-icons/boxicons-logos';
 
-import { StyledTitle } from '../../styles/shared';
+import { StyledTitle } from '../shared';
 
 interface Props {
   inverted?: boolean;

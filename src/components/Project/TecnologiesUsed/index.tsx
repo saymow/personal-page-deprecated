@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, TecnologiesList } from './styles';
 
-import { IProjectTechs } from '../../../../@Types/Project';
+import { IProjectTechs } from '../../../@Types/Project';
 
 interface Props {
   techsUsed: IProjectTechs;
