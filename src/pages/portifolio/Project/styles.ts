@@ -65,7 +65,7 @@ export const ProjectInfo = styled.div`
 `;
 
 export const MoreInfo = styled.div`
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   background: rgba(0, 0, 0, 0.1);
 
   h4 {

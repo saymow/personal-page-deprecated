@@ -1,0 +1,96 @@
+{
+  "title": "NLW 2 - Proffy",
+  "description": {
+    "en": "Proffy, an application intended to connect school professors to students. Made on #NLW2.",
+    "pt": "Proffy, uma aplicação destinada a conectar professores escolares com estudantes. Feita na #NLW2"
+  },
+  "image": "proffy.png",
+  "references": [
+    {
+      "type": "Github",
+      "url": "https://github.com/saymow/NLW-Edition-2"
+    }
+  ],
+  "techsUsed": [
+    {
+      "field": "Web",
+      "tecnologies": [
+        {
+          "name": "React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "name": "Axios",
+          "url": "https://github.com/axios/axios"
+        },
+        {
+          "name": "Styled-components",
+          "url": "https://styled-components.com/"
+        },
+        {
+          "name": "Yup",
+          "url": "https://github.com/jquense/yup"
+        },
+        {
+          "name": "Formik",
+          "url": "https://formik.org/"
+        }
+      ]
+    },
+    {
+      "field": "Server",
+      "tecnologies": [
+        {
+          "name": "Node",
+          "url": "https://nodejs.org/"
+        },
+        {
+          "name": "Express",
+          "url": "https://expressjs.com/"
+        },
+        {
+          "name": "Knex",
+          "url": "http://knexjs.org/"
+        },
+        {
+          "name": "Bcrypt",
+          "url": "https://www.npmjs.com/package/bcrypt"
+        },
+        {
+          "name": "Jsonwebtoken",
+          "url": "todo.todo"
+        },
+        {
+          "name": "Nodemailer",
+          "url": "https://www.npmjs.com/package/jsonwebtoken"
+        },
+        {
+          "name": "Multer",
+          "url": "https://www.npmjs.com/package/multer"
+        }
+      ]
+    },
+    {
+      "field": "Mobile",
+      "tecnologies": [
+        {
+          "name": "React-native",
+          "url": "https://reactnative.dev/"
+        },
+        {
+          "name": "Expo",
+          "url": "https://expo.io//"
+        }
+      ]
+    },
+    {
+      "field": "Database",
+      "tecnologies": [
+        {
+          "name": "SQlite",
+          "url": "https://www.sqlite.org/"
+        }
+      ]
+    }
+  ]
+}

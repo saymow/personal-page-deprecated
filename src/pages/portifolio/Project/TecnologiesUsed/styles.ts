@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
+import { VerticalStyledScroll } from '../../../../styles/shared';
+
 export const Container = styled.div`
-  overflow: hidden;
+  overflow-x: hidden;
   background: rgba(0, 0, 0, 0.8);
+
+  ${VerticalStyledScroll}
 
   h4 {
     font-size: 2.4rem;

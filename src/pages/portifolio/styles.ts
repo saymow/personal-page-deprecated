@@ -42,4 +42,5 @@ export const ProjectsList = styled.ul`
 
 export const SectionTitle = styled.h2`
   ${StyledTitle}
+  font-size: 3.5rem;
 `;

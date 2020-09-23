@@ -20,6 +20,17 @@ export const HorizontalStyledScroll = css`
   }
 `;
 
+export const VerticalStyledScroll = css`
+  ::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-background);
+    border-radius: 0.4rem;
+  }
+`;
+
 export const StyledTitle = css`
   position: relative;
   font-size: 4rem;

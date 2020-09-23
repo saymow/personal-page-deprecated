@@ -1,0 +1,99 @@
+{
+  "title": "Ecommerce 1.0",
+  "description": {
+    "en": "A challenge that i proposed for myself, create a real world e commerce. Though it could've been even better if i've used proper technologies to reach there. That's why the 1.0 version 😊.",
+    "pt": "Um desafio que me propus a fazer, criar um e-commerce. No entanto, ele poderia ter ficado ainda melhor, se eu tivesse escolhido tecnologias mais adequadas. Esta é a razão da versão 1.0  😊."
+  },
+  "image": "ecommerce1.0.jpg",
+  "references": [
+    {
+      "type": "Github",
+      "url": "https://github.com/saymow/E-Commerce-1.0"
+    },
+    {
+      "type": "Netlify",
+      "url": "https://e-commerce1.netlify.app/"
+    }
+  ],
+  "techsUsed": [
+    {
+      "field": "Web",
+      "tecnologies": [
+        {
+          "name": "React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "name": "Stripe",
+          "url": "https://stripe.com/en-br"
+        },
+        {
+          "name": "Axios",
+          "url": "https://github.com/axios/axios"
+        },
+        {
+          "name": "Styled-components",
+          "url": "https://styled-components.com/"
+        },
+        {
+          "name": "Yup",
+          "url": "https://github.com/jquense/yup"
+        },
+        {
+          "name": "Formik",
+          "url": "https://formik.org/"
+        }
+      ]
+    },
+    {
+      "field": "Server",
+      "tecnologies": [
+        {
+          "name": "Node",
+          "url": "https://nodejs.org/"
+        },
+        {
+          "name": "Express",
+          "url": "https://expressjs.com/"
+        },
+        {
+          "name": "Stripe",
+          "url": "https://stripe.com/"
+        },
+        {
+          "name": "Knex",
+          "url": "http://knexjs.org/"
+        },
+        {
+          "name": "Bcrypt",
+          "url": "https://www.npmjs.com/package/bcrypt"
+        },
+        {
+          "name": "Jsonwebtoken",
+          "url": "todo.todo"
+        },
+        {
+          "name": "Nodemailer",
+          "url": "https://www.npmjs.com/package/jsonwebtoken"
+        },
+        {
+          "name": "Multer",
+          "url": "https://www.npmjs.com/package/multer"
+        }
+      ]
+    },
+    {
+      "field": "Database",
+      "tecnologies": [
+        {
+          "name": "PostgreSQL",
+          "url": "https://www.postgresql.org/"
+        },
+        {
+          "name": "Redis",
+          "url": "https://redis.io/"
+        }
+      ]
+    }
+  ]
+}

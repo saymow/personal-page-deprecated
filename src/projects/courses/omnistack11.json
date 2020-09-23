@@ -1,0 +1,68 @@
+{
+  "title": "Semanaomnistack - Be The Hero",
+  "description": {
+    "en": "Be The Hero, an application whose is intended to register NGOs, which can publish their cases so that other people can help financially. Made on omnistack week 11.",
+    "pt": "Be The Hero, uma aplicação que recebe cadastro de ONGs que, por sua vez, cadastram casos em que outras pessoas podem ajudar financeiramente. Feita na semana omnistack 11."
+  },
+  "image": "omnistack11.jpg",
+  "references": [
+    {
+      "type": "Github",
+      "url": "https://github.com/saymow/Be-The-Hero"
+    }
+  ],
+  "techsUsed": [
+    {
+      "field": "Web",
+      "tecnologies": [
+        {
+          "name": "React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "name": "Axios",
+          "url": "https://github.com/axios/axios"
+        }
+      ]
+    },
+    {
+      "field": "Mobile",
+      "tecnologies": [
+        {
+          "name": "React-native",
+          "url": "https://reactnative.dev/"
+        },
+        {
+          "name": "Expo",
+          "url": "https://expo.io/"
+        }
+      ]
+    },
+    {
+      "field": "Server",
+      "tecnologies": [
+        {
+          "name": "Node",
+          "url": "https://nodejs.org/"
+        },
+        {
+          "name": "Express",
+          "url": "https://expressjs.com/"
+        },
+        {
+          "name": "Knex",
+          "url": "http://knexjs.org/"
+        }
+      ]
+    },
+    {
+      "field": "Database",
+      "tecnologies": [
+        {
+          "name": "SQlite",
+          "url": "https://www.sqlite.org/"
+        }
+      ]
+    }
+  ]
+}

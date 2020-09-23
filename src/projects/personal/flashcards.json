@@ -1,6 +1,6 @@
 {
   "title": "Flash cards",
-  "image": "flashcards.jpg",
+  "image": "flashcards.png",
   "description": {
     "en": "My first fullstack project. A Fibonnaci based flash card application made during cs50 course.",
     "pt": "Meu primeiro projeto fullstack. Uma aplicação de flashcards baseado na sequência de Fibonnaci, feita durante cs50."
@@ -8,11 +8,7 @@
   "references": [
     {
       "type": "Github",
-      "url": "example.com"
-    },
-    {
-      "type": "Netlify",
-      "url": "example.com"
+      "url": "https://github.com/saymow/Fibonnaci-s-sequence-based-Flashcards"
     }
   ],
   "techsUsed": [
@@ -21,15 +17,35 @@
       "tecnologies": [
         {
           "name": "React",
-          "url": "todo.todo"
+          "url": "https://reactjs.org/"
+        },
+        {
+          "name": "DraftJS",
+          "url": "https://draftjs.org/"
         },
         {
           "name": "Axios",
-          "url": "todo.todo"
+          "url": "https://github.com/axios/axios"
+        },
+        {
+          "name": "Unform",
+          "url": "https://github.com/Rocketseat/unform"
+        },
+        {
+          "name": "Yup",
+          "url": "https://github.com/jquense/yup"
         },
         {
           "name": "Styled-components",
-          "url": "todo.todo"
+          "url": "https://www.styled-components.com/"
+        },
+        {
+          "name": "Bootstrap",
+          "url": "https://getbootstrap.com/"
+        },
+        {
+          "name": "Material-ui",
+          "url": "https://material-ui.com/"
         }
       ]
     },
@@ -38,15 +54,28 @@
       "tecnologies": [
         {
           "name": "Node",
-          "url": "todo.todo"
+          "url": "https://nodejs.org/"
         },
         {
           "name": "Express",
-          "url": "todo.todo"
+          "url": "https://expressjs.com/"
         },
         {
-          "name": "Knex",
-          "url": "todo.todo"
+          "name": "Bcrypt",
+          "url": "https://www.npmjs.com/package/bcrypt"
+        },
+        {
+          "name": "Jsonwebtoken",
+          "url": "https://www.jsonwebtoken.io/"
+        }
+      ]
+    },
+    {
+      "field": "Database",
+      "tecnologies": [
+        {
+          "name": "Mysql",
+          "url": "https://www.mysql.com/"
         }
       ]
     }

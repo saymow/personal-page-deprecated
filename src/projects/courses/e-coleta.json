@@ -1,0 +1,84 @@
+{
+  "title": "NLW 1 - Ecoleta",
+  "description": {
+    "en": "Ecoleta, an application intended to register waste collector points, so that people can get rid of their waste in a proper way. made on #NLW1.",
+    "pt": "Ecoleta, uma aplicação para cadastros de pontos de coleta de resíduos, de forma que as pessoas possam descartar seus resíduos adequadamente. feito na #NLW1. "
+  },
+  "image": "e-coleta.png",
+  "references": [
+    {
+      "type": "Github",
+      "url": "https://github.com/saymow/NLW-Edition-1"
+    }
+  ],
+  "techsUsed": [
+    {
+      "field": "Web",
+      "tecnologies": [
+        {
+          "name": "React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "name": "Axios",
+          "url": "https://github.com/axios/axios"
+        },
+        {
+          "name": "Leaflet",
+          "url": "https://leafletjs.com/"
+        },
+        {
+          "name": "Yup",
+          "url": "https://github.com/jquense/yup"
+        }
+      ]
+    },
+    {
+      "field": "Mobile",
+      "tecnologies": [
+        {
+          "name": "React-native",
+          "url": "https://reactnative.dev/"
+        },
+        {
+          "name": "Expo",
+          "url": "https://expo.io/"
+        }
+      ]
+    },
+    {
+      "field": "Server",
+      "tecnologies": [
+        {
+          "name": "Node",
+          "url": "https://nodejs.org/"
+        },
+        {
+          "name": "Express",
+          "url": "https://expressjs.com/"
+        },
+        {
+          "name": "Knex",
+          "url": "http://knexjs.org/"
+        },
+        {
+          "name": "Celebrate",
+          "url": "https://www.npmjs.com/package/celebrate"
+        },
+        {
+          "name": "Multer",
+          "url": "https://www.npmjs.com/package/multer"
+        }
+      ]
+    },
+    {
+      "field": "Database",
+      "tecnologies": [
+        {
+          "name": "SQlite",
+          "url": "https://www.sqlite.org/"
+        }
+      ]
+    }
+  ]
+}

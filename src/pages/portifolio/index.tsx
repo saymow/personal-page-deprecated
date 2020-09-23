@@ -18,8 +18,6 @@ interface Props {
 }
 
 const Portifolio: React.FC<Props> = ({ data }) => {
-  console.log(data);
-
   return (
     <Layout>
       <Head title="Portifolio" />
@@ -31,6 +29,7 @@ const Portifolio: React.FC<Props> = ({ data }) => {
             {data.allPersonalJson.edges.map(({ node }) => (
               <li>
                 <Project
+                  key={node.title}
                   title={node.title}
                   fluidImage={node.image.childImageSharp.fluid}
                   description={node.description}
@@ -43,7 +42,20 @@ const Portifolio: React.FC<Props> = ({ data }) => {
         </Section>
         <Section>
           <SectionTitle>On Courses</SectionTitle>
-          <ProjectsList></ProjectsList>
+          <ProjectsList>
+            {data.allCoursesJson.edges.map(({ node }) => (
+              <li>
+                <Project
+                  key={node.title}
+                  title={node.title}
+                  fluidImage={node.image.childImageSharp.fluid}
+                  description={node.description}
+                  references={node.references}
+                  techsUsed={node.techsUsed}
+                />
+              </li>
+            ))}
+          </ProjectsList>
         </Section>
       </Container>
     </Layout>
@@ -73,7 +85,40 @@ export const query = graphql`
           }
           image {
             childImageSharp {
-              fluid(maxWidth: 400) {
+              fluid {
+                base64
+                aspectRatio
+                src
+                srcSet
+                sizes
+              }
+            }
+          }
+        }
+      }
+    }
+    allCoursesJson {
+      edges {
+        node {
+          title
+          description {
+            en
+            pt
+          }
+          references {
+            type
+            url
+          }
+          techsUsed {
+            field
+            tecnologies {
+              name
+              url
+            }
+          }
+          image {
+            childImageSharp {
+              fluid {
                 base64
                 aspectRatio
                 src
