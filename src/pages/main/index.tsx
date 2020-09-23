@@ -14,7 +14,6 @@ import {
   IconsContainer,
   GithubIcon,
   LinkedinIcon,
-  DiscordIcon,
 } from './styles';
 
 const Main: React.FC = () => {
@@ -66,12 +65,18 @@ const Main: React.FC = () => {
               </p>
             </SectionContent>
           </Section>
-          <Section ref={sectionsRef[1]} inverted={true}>
+          <Section id="contact-me" ref={sectionsRef[1]} inverted={true}>
             <SectionTitle>You can find me at</SectionTitle>
             <IconsContainer>
-              <GithubIcon />
-              <LinkedinIcon />
-              <DiscordIcon />
+              <a href="https://github.com/saymow" target="_blank">
+                <GithubIcon />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/gustavo-alves-6571a11a9/"
+                target="_blank"
+              >
+                <LinkedinIcon />
+              </a>
             </IconsContainer>
           </Section>
           <Section ref={sectionsRef[2]}>

@@ -36,15 +36,16 @@ const Header: React.FC = () => {
         </LogoBox>
         <NavBar>
           <ul>
-            <AniLink cover bg="#151616" direction="right" to="/blog">
-              <li>Blog</li>
-            </AniLink>
-            <AniLink cover bg="#151616" direction="right" to="/portifolio">
-              <li>Portifolio</li>
-            </AniLink>
-            <Link to="*">
-              <li>Contact me</li>
-            </Link>
+            <li>
+              <AniLink cover bg="#151616" direction="right" to="/blog">
+                Blog
+              </AniLink>
+            </li>
+            <li>
+              <AniLink cover bg="#151616" direction="right" to="/portifolio">
+                Portifolio
+              </AniLink>
+            </li>
           </ul>
         </NavBar>
       </Box>

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Github, Discord, Linkedin } from 'styled-icons/boxicons-logos';
+import { Github, Linkedin } from 'styled-icons/boxicons-logos';
 
 import { StyledTitle } from '../../styles/shared';
 
@@ -51,10 +51,6 @@ export const IconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  svg:not(:last-child) {
-    margin-right: 5rem;
-  }
 `;
 
 const IconsCss = css`
@@ -68,14 +64,13 @@ const IconsCss = css`
   &:hover {
     transform: scale(1.2) translateY(-20%);
   }
+
+  margin-right: 5rem;
 `;
 
 export const GithubIcon = styled(Github)`
   ${IconsCss}
 `;
 export const LinkedinIcon = styled(Linkedin)`
-  ${IconsCss}
-`;
-export const DiscordIcon = styled(Discord)`
   ${IconsCss}
 `;

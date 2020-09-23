@@ -50,14 +50,14 @@ export const NavBar = styled.nav`
     display: flex;
     align-items: center;
 
-    a {
+    li {
       height: 100%;
       display: flex;
       align-items: center;
-      text-decoration: none;
       padding: 0 1rem;
 
-      li {
+      a {
+        text-decoration: none;
         font-size: 2rem;
       }
 
