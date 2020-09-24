@@ -17,7 +17,7 @@ const Frame: React.FC = () => {
       <Background />
       <FrameContent>
         <MainSquare>
-          <ShadowSquare />:
+          <ShadowSquare />
           <Title>
             Web <br />
             Developer

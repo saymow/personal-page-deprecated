@@ -26,6 +26,10 @@ const GlobalStyles = createGlobalStyle<{ theme: themeType }>`
     @media (max-width: 640px) {
       font-size: 50%;
     }
+
+    @media (max-width: 380px) {
+      font-size: 43.25%;
+    }
   }
 
   * {

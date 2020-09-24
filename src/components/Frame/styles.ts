@@ -28,6 +28,11 @@ export const FrameContent = styled.div`
 const squareDimensions = css`
   height: 45rem;
   width: 28rem;
+
+  @media (max-width: 860px) {
+    height: 40rem;
+    width: 22rem;
+  }
 `;
 
 export const MainSquare = styled.div`
@@ -73,6 +78,11 @@ export const Title = styled.h1`
 
   font-size: 10rem;
   font-weight: 400;
+
+  @media (max-width: 560px) {
+    font-size: 6rem;
+    top: calc(50% - 9rem);
+  }
 `;
 
 export const NameBox = styled.div`
@@ -83,6 +93,12 @@ export const NameBox = styled.div`
   p {
     font-weight: bold;
     font-size: 6rem;
+  }
+
+  @media (max-width: 480px) {
+    p {
+      font-size: 4rem;
+    }
   }
 `;
 
