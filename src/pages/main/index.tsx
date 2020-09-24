@@ -7,11 +7,12 @@ import {
   Container,
   Content,
   GithubIcon,
-  IconsContainer,
-  LinkedinIcon,
   Section,
   SectionContent,
   SectionTitle,
+  IconsContainer,
+  LinkedinIcon,
+  EmailIcon,
 } from '../../styles/main/styles';
 
 const Main: React.FC = () => {
@@ -74,6 +75,9 @@ const Main: React.FC = () => {
                 target="_blank"
               >
                 <LinkedinIcon />
+              </a>
+              <a href="mailto:gustavo_alves2010@yahoo.com.br">
+                <EmailIcon />
               </a>
             </IconsContainer>
           </Section>

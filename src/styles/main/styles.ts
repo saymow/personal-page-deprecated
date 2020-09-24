@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Github, Linkedin } from 'styled-icons/boxicons-logos';
+import { EmailOutline } from '@styled-icons/evaicons-outline';
 
 import { StyledTitle } from '../shared';
 
@@ -72,5 +73,9 @@ export const GithubIcon = styled(Github)`
   ${IconsCss}
 `;
 export const LinkedinIcon = styled(Linkedin)`
+  ${IconsCss}
+`;
+
+export const EmailIcon = styled(EmailOutline)`
   ${IconsCss}
 `;
