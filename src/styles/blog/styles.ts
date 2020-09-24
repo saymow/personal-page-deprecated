@@ -17,7 +17,7 @@ export const PostsSection = styled.section`
 
   ul {
     list-style: none;
-    margin: 3rem 7rem;
+    margin: 3rem 0;
     display: flex;
     flex-wrap: wrap;
 
@@ -25,8 +25,24 @@ export const PostsSection = styled.section`
       flex: 0 28%;
       margin: 5rem 0;
 
-      &:nth-child(3n + 2) {
-        margin: 5rem 8%;
+      @media (min-width: 1060px) {
+        &:nth-child(3n + 2) {
+          margin: 5rem 8%;
+        }
+      }
+
+      @media (max-width: 1060px) {
+        flex: 0 46%;
+
+        &:nth-child(even) {
+          margin-left: 8%;
+        }
+      }
+
+      @media (max-width: 680px) {
+        flex: 0 min(90%, 38rem);
+
+        margin: 5rem auto !important;
       }
     }
   }
