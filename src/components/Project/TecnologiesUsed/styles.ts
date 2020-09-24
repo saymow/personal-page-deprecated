@@ -1,12 +1,24 @@
 import styled from 'styled-components';
 
-import { VerticalStyledScroll } from '../../../styles/shared';
+import {
+  VerticalStyledScroll,
+  HorizontalStyledScroll,
+} from '../../../styles/shared';
 
 export const Container = styled.div`
-  overflow-x: hidden;
   background: rgba(0, 0, 0, 0.8);
 
-  ${VerticalStyledScroll}
+  height: 100%;
+  padding: 1rem;
+
+  @media (min-width: 640px) {
+    overflow-x: hidden;
+    ${VerticalStyledScroll}
+  }
+  @media (max-width: 640px) {
+    overflow-y: hidden;
+    ${HorizontalStyledScroll}
+  }
 
   h4 {
     font-size: 2.4rem;
@@ -14,11 +26,25 @@ export const Container = styled.div`
   }
 
   section {
-    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
 
-    h5 {
-      font-size: 1.8rem;
-      text-transform: uppercase;
+    @media (max-width: 640px) {
+      flex-direction: row;
+      align-items: flex-start;
+
+      article {
+        margin-left: 1.4rem;
+      }
+    }
+
+    article {
+      margin-top: 1.2rem;
+
+      h5 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+      }
     }
   }
 `;

@@ -28,14 +28,19 @@ export const ProjectsList = styled.ul`
 
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
 
   > li {
     flex: 0 47%;
     margin: 5rem 0;
 
     &:nth-child(even) {
-      margin-left: 6%;
+    }
+
+    @media (max-width: 1000px) {
+      flex: 0 80%;
     }
   }
 `;

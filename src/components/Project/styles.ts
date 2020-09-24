@@ -13,27 +13,52 @@ export const Container = styled.article`
   display: grid;
   grid-template-columns: 2fr 3fr;
 
-  > div:first-child {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    max-width: 0;
-
-    transition: all 200ms ease-in-out;
+  @media (min-width: 640px) {
+    &:hover > div:first-child {
+      max-width: 40%;
+    }
   }
 
-  &:hover > div:first-child {
-    max-width: 40%;
-    padding: 1rem;
+  @media (max-width: 640px) {
+    height: 60rem;
+    grid-template-columns: unset;
+    grid-template-rows: 2fr 3fr;
+
+    &:hover > div:first-child {
+      max-height: 40%;
+    }
   }
 
   > div:nth-child(2) {
     height: 100%;
     width: 100%;
     overflow: hidden;
+  }
+`;
+
+export const HiddenElement = styled.div`
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 0;
+
+  overflow-x: hidden;
+
+  transition: all 200ms ease-in-out;
+
+  @media (max-width: 640px) {
+    bottom: unset;
+    right: 0;
+
+    max-width: unset;
+    height: 100%;
+    max-height: 0;
+
+    overflow-x: unset;
+    overflow-y: hidden;
   }
 `;
 

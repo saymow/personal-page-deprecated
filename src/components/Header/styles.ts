@@ -25,6 +25,11 @@ export const Box = styled.main`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    height: 12rem;
+  }
 `;
 
 export const LogoBox = styled.div`
@@ -54,20 +59,39 @@ export const NavBar = styled.nav`
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 0 1rem;
+      padding: 0 2rem;
+
+      transition: 200ms ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
 
       a {
         text-decoration: none;
         font-size: 2rem;
       }
 
-      &:not(:last-child) {
-        margin-right: 3rem;
-      }
-
       &:last-child {
         font-weight: bold;
         background: var(--color-purple);
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    ul {
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        padding: 0.5rem;
+        width: 100%;
+
+        a {
+          margin: auto;
+        }
       }
     }
   }

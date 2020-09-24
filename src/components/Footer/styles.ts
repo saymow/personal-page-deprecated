@@ -16,9 +16,20 @@ export const Box = styled.footer`
 
   div {
     display: flex;
-    align-items: center;
-
     margin: 1rem;
+
+    section:first-child {
+      margin-right: 14rem;
+    }
+
+    @media (max-width: 920px) {
+      align-items: center;
+      flex-direction: column;
+
+      section:first-child {
+        margin: 2rem 0;
+      }
+    }
   }
 
   > p {
@@ -34,7 +45,6 @@ export const MainSection = styled.section`
 `;
 
 export const Section = styled.section`
-  margin-left: 16rem;
   display: flex;
 
   ul {
@@ -54,6 +64,19 @@ export const Section = styled.section`
 
       &:not(:first-child) {
         color: var(--color-text-secondary);
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    ul {
+      margin: 1rem 0;
+
+      &:not(:first-child) {
+        margin-left: unset;
       }
     }
   }

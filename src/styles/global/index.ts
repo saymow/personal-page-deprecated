@@ -17,6 +17,15 @@ const GlobalStyles = createGlobalStyle<{ theme: themeType }>`
     --color-green: ${({ theme }) => theme.green};
     --color-green-secondary: ${({ theme }) => theme.green_secondary};
     --boxshadow: 6px 6px 10px 0px rgb(2 2 2 / 37%);
+
+
+    @media (max-width: 860px) {
+      font-size: 56,75%;
+    }
+
+    @media (max-width: 640px) {
+      font-size: 50%;
+    }
   }
 
   * {

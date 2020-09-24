@@ -43,7 +43,7 @@ const Blog: React.FC<Props> = ({ data }) => {
                       <h2>{edge.node.frontmatter.title}</h2>
                       <BadgesContainer>
                         {edge.node.frontmatter.tags.map((tag) => (
-                          <PostBadge tag={tag.toLowerCase()} />
+                          <PostBadge key={tag} tag={tag.toLowerCase()} />
                         ))}
                       </BadgesContainer>
                     </PostInfoHeader>

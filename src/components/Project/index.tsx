@@ -7,6 +7,7 @@ import { IProject } from '../../@Types/Project';
 
 import {
   Container,
+  HiddenElement,
   ProjectInfo,
   MoreInfo,
   GithubIcon,
@@ -27,7 +28,9 @@ const Project: React.FC<IProject> = ({
 
   return (
     <Container>
-      <TecnologiesUsed techsUsed={techsUsed} />
+      <HiddenElement>
+        <TecnologiesUsed techsUsed={techsUsed} />
+      </HiddenElement>
       <Img fluid={fluidImage} />
       <ProjectInfo>
         <div>

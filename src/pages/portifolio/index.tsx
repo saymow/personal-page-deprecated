@@ -27,9 +27,8 @@ const Portifolio: React.FC<Props> = ({ data }) => {
           <SectionTitle>Personal</SectionTitle>
           <ProjectsList>
             {data.allPersonalJson.edges.map(({ node }) => (
-              <li>
+              <li key={node.title}>
                 <Project
-                  key={node.title}
                   title={node.title}
                   fluidImage={node.image.childImageSharp.fluid}
                   description={node.description}
@@ -44,9 +43,8 @@ const Portifolio: React.FC<Props> = ({ data }) => {
           <SectionTitle>On Courses</SectionTitle>
           <ProjectsList>
             {data.allCoursesJson.edges.map(({ node }) => (
-              <li>
+              <li key={node.title}>
                 <Project
-                  key={node.title}
                   title={node.title}
                   fluidImage={node.image.childImageSharp.fluid}
                   description={node.description}

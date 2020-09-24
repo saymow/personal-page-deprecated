@@ -14,6 +14,10 @@ export const Content = styled.main`
 
   margin: 5rem auto 0 auto;
 
+  @media (max-width: 480px) {
+    margin: 12rem auto 0 auto;
+  }
+
   max-width: 1260px;
   width: 100%;
 `;
