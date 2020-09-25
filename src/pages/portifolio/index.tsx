@@ -11,7 +11,7 @@ import {
   Section,
   SectionTitle,
   ProjectsList,
-} from '../../styles/portifolio/styles';
+} from '../../styles/portifolio';
 
 interface Props {
   data: any;

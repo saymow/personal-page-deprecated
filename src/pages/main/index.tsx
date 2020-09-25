@@ -13,7 +13,7 @@ import {
   IconsContainer,
   LinkedinIcon,
   EmailIcon,
-} from '../../styles/main/styles';
+} from '../../styles/main';
 
 const Main: React.FC = () => {
   const sectionsRef = [

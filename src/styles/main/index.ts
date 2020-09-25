@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Github, Linkedin } from 'styled-icons/boxicons-logos';
-import { EmailOutline } from '@styled-icons/evaicons-outline';
+import { EmailOutline } from 'styled-icons/evaicons-outline';
 
 import { StyledTitle } from '../shared';
 

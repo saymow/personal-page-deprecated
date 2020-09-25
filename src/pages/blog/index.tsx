@@ -17,7 +17,7 @@ import {
   BadgesContainer,
   PostInfoDescription,
   PostInfoCommands,
-} from '../../styles/blog/styles';
+} from '../../styles/blog';
 
 const Blog: React.FC<Props> = ({ data }) => {
   return (
