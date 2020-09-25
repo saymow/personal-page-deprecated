@@ -2,6 +2,10 @@ import React from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { graphql } from 'gatsby';
 
+import Layout from '../../components/Layout';
+import Head from '../../components/Head';
+import PostBadge, { AvailableBadges } from '../../components/PostBadge';
+
 import {
   Container,
   Header,
@@ -9,14 +13,11 @@ import {
   PostArticle,
   ArrowBack,
 } from './styles';
-import Layout from '../../components/Layout';
-import Head from '../../components/Head';
-import PostBadge, { AvailableBadges } from '../../components/PostBadge';
 
 const Blog: React.FC<Props> = ({ data }) => {
   const {
     markdownRemark: {
-      frontmatter: { title, date, tags },
+      frontmatter: { title, date, tags, description },
       html,
       timeToRead,
     },
@@ -24,7 +25,16 @@ const Blog: React.FC<Props> = ({ data }) => {
 
   return (
     <Layout>
-      <Head title={title} />
+      <Head
+        title={title}
+        description={description}
+        meta={[
+          {
+            name: 'keywords',
+            content: tags.join(', '),
+          },
+        ]}
+      />
       <Container>
         <Header>
           <AniLink paintDrip hex="#121212" to="/blog">
@@ -52,6 +62,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        description
         date(locale: "en-us", formatString: "MMMM DD[,] YYYY")
         tags
       }
@@ -66,6 +77,7 @@ interface Props extends React.FC {
     markdownRemark: {
       frontmatter: {
         title: string;
+        description: string;
         date: string;
         tags: AvailableBadges[];
       };

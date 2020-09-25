@@ -19,7 +19,7 @@ const TecnologiesUsed: React.FC<Props> = ({ techsUsed }) => {
             <TecnologiesList>
               {tecnologies.map((tecnology) => (
                 <li key={tecnology.name}>
-                  <a href={tecnology.url} target="__blank">
+                  <a href={tecnology.url} target="__blank" rel="noreferrer">
                     {tecnology.name}
                   </a>
                 </li>

@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react';
+
 import ContactForm from '../../components/ContactForm';
 import Head from '../../components/Head';
 import Layout from '../../components/Layout';
 import Frame from '../../components/Frame';
+
 import {
   Container,
   Content,
@@ -67,16 +69,21 @@ const Main: React.FC = () => {
           <Section id="contact-me" ref={sectionsRef[1]} inverted={true}>
             <SectionTitle>You can find me at</SectionTitle>
             <IconsContainer>
-              <a href="https://github.com/saymow" target="_blank">
+              <a
+                href="https://github.com/saymow"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <GithubIcon />
               </a>
               <a
                 href="https://www.linkedin.com/in/gustavo-alves-6571a11a9/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <LinkedinIcon />
               </a>
-              <a href="mailto:gustavo_alves2010@yahoo.com.br">
+              <a href="mailto:gustavo_alves2010@yahoo.com.br" rel="noreferrer">
                 <EmailIcon />
               </a>
             </IconsContainer>

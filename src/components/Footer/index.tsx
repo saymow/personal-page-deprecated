@@ -31,7 +31,11 @@ const Footer: React.FC = () => {
             <ul>
               <li>You can find me at</li>
               <li>
-                <a href="https://github.com/saymow" target="_blank">
+                <a
+                  href="https://github.com/saymow"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Github
                 </a>
               </li>
@@ -39,6 +43,7 @@ const Footer: React.FC = () => {
                 <a
                   href="https://www.linkedin.com/in/gustavo-alves-6571a11a9/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Linkedin
                 </a>
@@ -47,7 +52,10 @@ const Footer: React.FC = () => {
             <ul>
               <li>Contact me</li>
               <li>
-                <a href="mailto:gustavo_alves2010@yahoo.com.br">
+                <a
+                  href="mailto:gustavo_alves2010@yahoo.com.br"
+                  rel="noreferrer"
+                >
                   gustavo_alves2010@yahoo.com.br
                 </a>
               </li>
