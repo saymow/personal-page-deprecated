@@ -42,5 +42,15 @@ module.exports = {
     },
     'gatsby-plugin-transition-link',
     'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-plugin-page-progress',
+      options: {
+        includePaths: [{ regex: '^/blog' }],
+        height: 3,
+        prependToBody: false,
+        color: `var(--color-purple)`,
+        footerHeight: 300,
+      },
+    },
   ],
 };

@@ -2,21 +2,19 @@ import React from 'react';
 
 import { Container } from './styles';
 
-interface Props {
-  tag:
-    | 'fundamentals'
-    | 'beginner'
-    | 'intermediate'
-    | 'advanced'
-    | 'javascript'
-    | 'html'
-    | 'css'
-    | 'react'
-    | 'node'
-    | 'gatsby';
-}
+export type AvailableBadges =
+  | 'fundamentals'
+  | 'beginner'
+  | 'intermediate'
+  | 'advanced'
+  | 'javascript'
+  | 'html'
+  | 'css'
+  | 'react'
+  | 'node'
+  | 'gatsby';
 
-const PostBadge: React.FC<Props> = ({ tag }) => {
+const PostBadge: React.FC<{ tag: AvailableBadges }> = ({ tag }) => {
   const respectiveBgColors = {
     fundamentals: '#bbb',
     beginner: '#adf869',
@@ -31,12 +29,16 @@ const PostBadge: React.FC<Props> = ({ tag }) => {
   };
 
   return (
-    <Container textOnHover={capitalize(tag)} bgColor={respectiveBgColors[tag]}>
+    <Container
+      textOnHover={capitalize(tag)}
+      bgColor={respectiveBgColors[tag.toLocaleLowerCase()]}
+    >
       {capitalize(tag)}
     </Container>
   );
 };
 
-const capitalize = (title: string) => title[0].toUpperCase() + title.slice(1);
+const capitalize = (title: string) =>
+  title[0].toUpperCase() + title.slice(1).toLocaleLowerCase();
 
 export default PostBadge;

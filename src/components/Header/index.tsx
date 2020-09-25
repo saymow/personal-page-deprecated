@@ -27,7 +27,7 @@ const Header: React.FC = () => {
     <Container className={show ? '' : 'hidden'}>
       <Box>
         <LogoBox>
-          <AniLink cover bg="#151616" direction="right" to="/">
+          <AniLink cover bg="#161616" direction="left" to="/">
             <p>
               <span>Gustavo</span>
               <i>Alves</i>
@@ -37,12 +37,12 @@ const Header: React.FC = () => {
         <NavBar>
           <ul>
             <li>
-              <AniLink cover bg="#151616" direction="right" to="/blog">
+              <AniLink cover bg="#161616" direction="right" to="/blog">
                 Blog
               </AniLink>
             </li>
             <li>
-              <AniLink cover bg="#151616" direction="right" to="/portifolio">
+              <AniLink cover bg="#161616" direction="right" to="/portifolio">
                 Portifolio
               </AniLink>
             </li>

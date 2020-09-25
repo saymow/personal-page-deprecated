@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { LinkWrapperBtn, HorizontalStyledScroll, StyledTitle } from '../shared';
+import { HorizontalStyledScroll, StyledTitle } from '../shared';
 
 export const Container = styled.div``;
 
@@ -24,6 +24,10 @@ export const PostsSection = styled.section`
     li {
       flex: 0 28%;
       margin: 5rem 0;
+
+      a {
+        text-decoration: none;
+      }
 
       @media (min-width: 1060px) {
         &:nth-child(3n + 2) {
@@ -114,15 +118,5 @@ export const PostInfoCommands = styled.div`
   span:first-child {
     font-size: 1.2rem;
     font-weight: bold;
-  }
-`;
-
-export const BtnSpan = styled(LinkWrapperBtn)`
-  font-size: 1.8rem;
-  font-weight: bold;
-  padding: 0.7rem;
-
-  a {
-    text-decoration: none;
   }
 `;
