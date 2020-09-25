@@ -10,6 +10,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'Gustavo Alves - Fullstack developer',
+    description: "Gustavo alves's personal website, blog and portofilio.",
     author: 'Gustavo Alves',
   },
   plugins: [
@@ -52,5 +53,20 @@ module.exports = {
         footerHeight: 300,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gustavo alves - Web Dev`,
+        short_name: `Gustavo alves`,
+        start_url: `/`,
+        background_color: `#121212`,
+        theme_color: `#9f69f8`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 };
