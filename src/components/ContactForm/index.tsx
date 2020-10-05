@@ -1,10 +1,13 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { useGlobalContext } from '../../../lib/wrapRootElement';
 
 import { Container, Fieldset, Button, Input, Textarea } from './styles';
 
 const ContactForm: React.FC = () => {
+  const { pushNotification } = useGlobalContext();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
+    email: '',
     subject: '',
     body: '',
   });
@@ -20,9 +23,34 @@ const ContactForm: React.FC = () => {
     });
   }
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    alert(JSON.stringify(formData, null, 2));
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/.netlify/functions/sendEmail', {
+        body: JSON.stringify(formData),
+        method: 'POST',
+      });
+
+      const responseBody = await response.json();
+
+      if (response.status !== 200) {
+        throw responseBody;
+      }
+
+      pushNotification('success', responseBody.message);
+    } catch (err) {
+      if (err.message.includes('input fields')) {
+        Object.values(err.fields).forEach((value) => {
+          pushNotification('warning', value);
+        });
+      } else {
+        pushNotification('error', err.message);
+      }
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -30,23 +58,25 @@ const ContactForm: React.FC = () => {
       <Fieldset>
         <Input>
           <input
-            type="text"
-            name="name"
-            id="name"
+            type="email"
+            name="email"
+            id="email"
             placeholder=" "
-            value={formData.name}
+            max="180"
+            value={formData.email}
             onChange={handleInputChange}
           />
-          <label htmlFor="name">Name</label>
+          <label htmlFor="email">Email</label>
         </Input>
       </Fieldset>
+
       <Fieldset>
         <Input>
           <input
-            type="text"
             name="subject"
             id="subject"
             placeholder=" "
+            max="120"
             value={formData.subject}
             onChange={handleInputChange}
           />
@@ -60,13 +90,14 @@ const ContactForm: React.FC = () => {
           <textarea
             name="body"
             id="body"
+            maxLength={520}
             placeholder="Type your message here."
             value={formData.body}
             onChange={handleInputChange}
           />
         </Textarea>
       </Fieldset>
-      <Button>Submit</Button>
+      <Button disabled={isLoading}>Submit</Button>
     </Container>
   );
 };

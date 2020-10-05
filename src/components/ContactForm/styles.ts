@@ -84,4 +84,9 @@ export const Button = styled.button`
   padding: 1rem;
   outline: 0;
   border: 0;
+
+  &:disabled {
+    cursor: auto;
+    filter: brightness(60%);
+  }
 `;

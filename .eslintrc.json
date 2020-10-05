@@ -22,7 +22,8 @@
       "ignorePackages",
       {
         "ts": "never",
-        "tsx": "never"
+        "tsx": "never",
+        "js": "never"
       }
     ],
     "import/prefer-default-export": "off",
@@ -35,7 +36,8 @@
   },
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "typescript": {},
+      "javascript": {}
     }
   }
 }
