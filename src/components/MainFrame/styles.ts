@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import BackgroundImage from '../../images/main-background.jpg';
+
 export const Container = styled.div`
   height: 100vh;
   width: 100%;
@@ -9,7 +11,7 @@ export const Background = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+  background: url(${BackgroundImage});
   background-attachment: fixed;
   background-size: cover;
   background-clip: content-box;

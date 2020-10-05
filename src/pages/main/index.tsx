@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import ContactForm from '../../components/ContactForm';
 import Head from '../../components/Head';
 import Layout from '../../components/Layout';
-import Frame from '../../components/Frame';
+import Frame from '../../components/MainFrame';
 
 import {
   Container,

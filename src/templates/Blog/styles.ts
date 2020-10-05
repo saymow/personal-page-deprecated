@@ -11,7 +11,7 @@ export const Header = styled.header`
   flex-direction: column;
   justify-content: space-between;
   margin: 5rem 0;
-  height: 20rem;
+  height: 30rem;
 
   h1 {
     font-size: 4rem;
@@ -46,10 +46,12 @@ export const BadgesList = styled.ul`
   list-style: none;
 
   display: flex;
+  overflow-x: auto;
 
   li {
-    &:not(:first-child) {
-      margin-left: 1rem;
+    margin: 1rem 0 0.5rem;
+    &:not(:last-child) {
+      margin: 1rem 1rem 0.5rem 0;
     }
 
     span {

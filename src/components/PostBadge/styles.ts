@@ -7,6 +7,7 @@ interface Props {
 
 export const Container = styled.span<Props>`
   position: relative;
+  display: block;
 
   padding: 0.4rem;
   background: ${({ bgColor }) => bgColor};
