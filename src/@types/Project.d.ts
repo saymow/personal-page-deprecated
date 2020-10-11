@@ -19,5 +19,6 @@ export interface IProject extends ProjectTechs {
     type: 'Github' | 'Netlify';
     url: string;
   }[];
+  beyondCourse?: boolean;
   techsUsed: IProjectTechs;
 }

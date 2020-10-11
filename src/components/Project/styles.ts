@@ -2,6 +2,11 @@ import styled, { css } from 'styled-components';
 
 import { Github } from 'styled-icons/boxicons-logos';
 import { Netlify } from 'styled-icons/simple-icons/';
+import { Star } from 'styled-icons/entypo/';
+
+interface AttachmentProps {
+  text: string;
+}
 
 export const Container = styled.article`
   position: relative;
@@ -90,6 +95,7 @@ export const ProjectInfo = styled.div`
 `;
 
 export const MoreInfo = styled.div`
+  position: relative;
   padding: 0.5rem 1rem;
   background: rgba(0, 0, 0, 0.1);
 
@@ -107,6 +113,41 @@ export const MoreInfo = styled.div`
       margin-left: 1rem;
     }
   }
+`;
+
+export const Attachment = styled.span<AttachmentProps>`
+  position: absolute;
+
+  top: 0.5rem;
+  right: 0.5rem;
+
+  &:hover ::after {
+    opacity: 1;
+  }
+
+  &:after {
+    opacity: 0;
+    content: '${({ text }) => text}';
+    font-size: 1.2rem;
+    text-align: center;
+
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+
+    position: absolute;
+    left: calc(20rem / -2);
+    top: -3.5rem;
+    z-index: 3;
+    width: 20rem;
+
+    transition: opacity 200ms ease;
+  }
+`;
+
+export const StarIcon = styled(Star)`
+  width: 2rem;
+  height: 2rem;
+  fill: #f6f202;
 `;
 
 const IconsCss = css`

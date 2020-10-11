@@ -12,6 +12,8 @@ import {
   MoreInfo,
   GithubIcon,
   NetlifyIcon,
+  Attachment,
+  StarIcon,
 } from './styles';
 
 const Project: React.FC<IProject> = ({
@@ -20,6 +22,7 @@ const Project: React.FC<IProject> = ({
   description,
   references,
   techsUsed,
+  beyondCourse,
 }) => {
   const referenceIcon = {
     Github: <GithubIcon />,
@@ -42,6 +45,13 @@ const Project: React.FC<IProject> = ({
         </div>
         <MoreInfo>
           <h4>More about</h4>
+          {beyondCourse && (
+            <Attachment
+              text={'This was developed beyond the course. Check it out.'}
+            >
+              <StarIcon />
+            </Attachment>
+          )}
           <ul>
             {references.map(({ type, url }) => (
               <li key={type}>

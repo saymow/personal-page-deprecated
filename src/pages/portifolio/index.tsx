@@ -18,6 +18,8 @@ interface Props {
 }
 
 const Portifolio: React.FC<Props> = ({ data }) => {
+  console.log(data.allCoursesJson.edges);
+
   return (
     <Layout>
       <Head title="Portifolio" />
@@ -50,6 +52,7 @@ const Portifolio: React.FC<Props> = ({ data }) => {
                   description={node.description}
                   references={node.references}
                   techsUsed={node.techsUsed}
+                  beyondCourse={node.beyondCourse}
                 />
               </li>
             ))}
@@ -107,6 +110,7 @@ export const query = graphql`
             type
             url
           }
+          beyondCourse
           techsUsed {
             field
             tecnologies {
