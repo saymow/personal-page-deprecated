@@ -1,0 +1,89 @@
+{
+  "title": "NLW 3 - Happy",
+  "description": {
+    "en": "Happy, an application destined to register orphanages, so that people can schedule visits to orphanages children. made on #NLW3.",
+    "pt": "Happy, uma aplicação destinado a cadastrar orfanatos, para que as pessoas possam agendar visitas às crianças. feito em #NLW3.. "
+  },
+  "image": "happy.png",
+  "references": [
+    {
+      "type": "Github",
+      "url": "https://github.com/saymow/NLW-Edition-3"
+    }
+  ],
+  "beyondCourse": true,
+  "techsUsed": [
+    {
+      "field": "Web",
+      "tecnologies": [
+        {
+          "name": "React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "name": "Axios",
+          "url": "https://github.com/axios/axios"
+        },
+        {
+          "name": "Leaflet",
+          "url": "https://leafletjs.com/"
+        },
+        {
+          "name": "Styled-components",
+          "url": "https://styled-components.com/"
+        }
+      ]
+    },
+    {
+      "field": "Mobile",
+      "tecnologies": [
+        {
+          "name": "React-native",
+          "url": "https://reactnative.dev/"
+        },
+        {
+          "name": "Expo",
+          "url": "https://expo.io/"
+        }
+      ]
+    },
+    {
+      "field": "Server",
+      "tecnologies": [
+        {
+          "name": "Node",
+          "url": "https://nodejs.org/"
+        },
+        {
+          "name": "Express",
+          "url": "https://expressjs.com/"
+        },
+        {
+          "name": "Typeorm",
+          "url": "https://typeorm.io/#/"
+        },
+        {
+          "name": "Yup",
+          "url": "https://github.com/jquense/yup"
+        },
+        {
+          "name": "Jest",
+          "url": "https://jestjs.io/"
+        },
+        {
+          "name": "Multer",
+          "url": "https://www.npmjs.com/package/multer"
+        }
+      ]
+    },
+    {
+      "field": "Database",
+      "tecnologies": [
+        {
+          "name": "PostgreSQL",
+          "url": "https://www.postgresql.org/"
+        }
+      ]
+    }
+  ]
+}

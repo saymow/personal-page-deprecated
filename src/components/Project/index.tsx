@@ -39,8 +39,8 @@ const Project: React.FC<IProject> = ({
         <div>
           <h3>{title}</h3>
           <div>
-            <p>{description.pt}</p>
             <p>{description.en}</p>
+            <p>{description.pt}</p>
           </div>
         </div>
         <MoreInfo>
