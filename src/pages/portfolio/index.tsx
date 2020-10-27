@@ -11,18 +11,18 @@ import {
   Section,
   SectionTitle,
   ProjectsList,
-} from '../../styles/portifolio';
+} from '../../styles/portfolio';
 
 interface Props {
   data: any;
 }
 
-const Portifolio: React.FC<Props> = ({ data }) => {
+const Portfolio: React.FC<Props> = ({ data }) => {
   console.log(data.allCoursesJson.edges);
 
   return (
     <Layout>
-      <Head title="Portifolio" />
+      <Head title="Portfolio" />
       <Container>
         <Title>Projects i've made:</Title>
         <Section>
@@ -135,4 +135,4 @@ export const query = graphql`
   }
 `;
 
-export default Portifolio;
+export default Portfolio;
