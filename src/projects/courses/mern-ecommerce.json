@@ -1,0 +1,72 @@
+{
+  "title": "Mern Ecommerce",
+  "description": {
+    "en": "A Ecommerce built using the MERN Stack - MongoDB, Express, ReactJS, NODE. It was made on udemy course 'MERN eCommerce From Scratch'.",
+    "pt": "Um Ecommerce feito com MERN Stack -   MongoDB, Express, ReactJS, NODE. Foi feito no curso 'MERN eCommerce From Scratch' presente na udemy."
+  },
+  "image": "mern-ecommerce.jpg",
+  "references": [
+    {
+      "type": "Github",
+      "url": "https://github.com/saymow/MERN-eCommerce"
+    }
+  ],
+  "beyondCourse": true,
+  "techsUsed": [
+    {
+      "field": "Web",
+      "tecnologies": [
+        {
+          "name": "React",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "name": "Axios",
+          "url": "https://github.com/axios/axios"
+        },
+        {
+          "name": "Redux",
+          "url": "https://styled-components.com/"
+        },
+        {
+          "name": "React-bootstrap",
+          "url": "https://styled-components.com/"
+        }
+      ]
+    },
+    {
+      "field": "Server",
+      "tecnologies": [
+        {
+          "name": "Node",
+          "url": "https://nodejs.org/"
+        },
+        {
+          "name": "Express",
+          "url": "https://expressjs.com/"
+        },
+        {
+          "name": "Mongoose",
+          "url": "https://mongoosejs.com/"
+        },
+        {
+          "name": "Jest",
+          "url": "https://jestjs.io/"
+        },
+        {
+          "name": "Multer",
+          "url": "https://www.npmjs.com/package/multer"
+        }
+      ]
+    },
+    {
+      "field": "Database",
+      "tecnologies": [
+        {
+          "name": "MongoDB",
+          "url": "https://www.mongodb.com//"
+        }
+      ]
+    }
+  ]
+}
