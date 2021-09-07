@@ -18,8 +18,6 @@ interface Props {
 }
 
 const Portfolio: React.FC<Props> = ({ data }) => {
-  console.log(data.allCoursesJson.edges);
-
   return (
     <Layout>
       <Head title="Portfolio" />
