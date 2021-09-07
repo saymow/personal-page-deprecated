@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
             type="email"
             name="email"
             id="email"
-            placeholder=" "
+            required
             max="180"
             value={formData.email}
             onChange={handleInputChange}
@@ -42,8 +42,8 @@ const ContactForm: React.FC = () => {
           <input
             name="subject"
             id="subject"
-            placeholder=" "
             max="120"
+            required
             value={formData.subject}
             onChange={handleInputChange}
           />
@@ -57,6 +57,7 @@ const ContactForm: React.FC = () => {
           <textarea
             name="body"
             id="body"
+            required
             maxLength={520}
             placeholder="Type your message here."
             value={formData.body}
@@ -64,7 +65,7 @@ const ContactForm: React.FC = () => {
           />
         </Textarea>
       </Fieldset>
-      <Button>Submit</Button>
+      <Button type="submit">Submit</Button>
     </Container>
   );
 };
