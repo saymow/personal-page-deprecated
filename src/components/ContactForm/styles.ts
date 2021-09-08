@@ -80,7 +80,7 @@ export const Button = styled.button`
   background: var(--color-purple);
 
   cursor: pointer;
-  min-width: 20%;
+  width: 100%;
   padding: 1rem;
   outline: 0;
   border: 0;
@@ -89,4 +89,8 @@ export const Button = styled.button`
     cursor: auto;
     filter: brightness(60%);
   }
+`;
+
+export const CaptchaContainer = styled.div`
+  margin: 0rem 0 2rem;
 `;

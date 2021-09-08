@@ -1,6 +1,13 @@
 import React, { ChangeEvent, useState } from 'react';
 
-import { Container, Fieldset, Button, Input, Textarea } from './styles';
+import {
+  Container,
+  Fieldset,
+  Button,
+  Input,
+  Textarea,
+  CaptchaContainer,
+} from './styles';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -21,8 +28,23 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <Container method="POST" data-netlify="true" name="contact">
+    <Container
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
+      name="contact"
+    >
       <input type="hidden" name="form-name" value="contact" />
+      <p
+        style={{
+          display: 'none',
+        }}
+      >
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </p>
       <Fieldset>
         <Input>
           <input
@@ -65,6 +87,7 @@ const ContactForm: React.FC = () => {
           />
         </Textarea>
       </Fieldset>
+      <CaptchaContainer data-netlify-recaptcha="true"></CaptchaContainer>
       <Button type="submit">Submit</Button>
     </Container>
   );
