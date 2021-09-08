@@ -22,6 +22,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <Container method="POST" data-netlify="true" name="contact">
+      <input type="hidden" name="form-name" value="contact" />
       <Fieldset>
         <Input>
           <input
@@ -36,7 +37,6 @@ const ContactForm: React.FC = () => {
           <label htmlFor="email">Email</label>
         </Input>
       </Fieldset>
-
       <Fieldset>
         <Input>
           <input
