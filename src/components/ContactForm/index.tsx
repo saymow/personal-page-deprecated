@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useRef, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { useGlobalContext } from '../../../lib/wrapRootElement';
 import {
   Button,
@@ -8,6 +8,8 @@ import {
   Input,
   Textarea,
 } from './styles';
+
+const FORM_NAME = 'contact';
 
 const ContactForm: React.FC = () => {
   const { pushNotification } = useGlobalContext();
@@ -44,12 +46,24 @@ const ContactForm: React.FC = () => {
   }
 
   async function postForm() {
+    function encode(data: Record<string, unknown>) {
+      return Object.keys(data)
+        .map(
+          (key) =>
+            `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
+        )
+        .join('&');
+    }
+
     return fetch('/', {
       method: 'POST',
       headers: {
-        Content_Type: 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: new URLSearchParams(formData).toString(),
+      body: encode({
+        'form-name': FORM_NAME,
+        ...formData,
+      }),
     });
   }
 
@@ -59,7 +73,7 @@ const ContactForm: React.FC = () => {
       data-netlify="true"
       netlify-honeypot="bot-field"
       data-netlify-recaptcha="true"
-      name="contact"
+      name={FORM_NAME}
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
