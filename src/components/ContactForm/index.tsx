@@ -72,7 +72,7 @@ const ContactForm: React.FC = () => {
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
+      // data-netlify-recaptcha="true"
       name={FORM_NAME}
       onSubmit={handleSubmit}
     >
@@ -127,7 +127,7 @@ const ContactForm: React.FC = () => {
           />
         </Textarea>
       </Fieldset>
-      <CaptchaContainer data-netlify-recaptcha="true"></CaptchaContainer>
+      {/* <CaptchaContainer data-netlify-recaptcha="true"></CaptchaContainer> */}
       <Button type="submit">Submit</Button>
     </Container>
   );
