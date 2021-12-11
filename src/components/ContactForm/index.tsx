@@ -1,15 +1,16 @@
-import React, { ChangeEvent, useState } from 'react';
-
+import React, { ChangeEvent, useRef, useState } from 'react';
+import { useGlobalContext } from '../../../lib/wrapRootElement';
 import {
+  Button,
+  CaptchaContainer,
   Container,
   Fieldset,
-  Button,
   Input,
   Textarea,
-  CaptchaContainer,
 } from './styles';
 
 const ContactForm: React.FC = () => {
+  const { pushNotification } = useGlobalContext();
   const [formData, setFormData] = useState({
     email: '',
     subject: '',
@@ -27,6 +28,31 @@ const ContactForm: React.FC = () => {
     });
   }
 
+  async function handleSubmit(e: React.SyntheticEvent) {
+    e.preventDefault();
+
+    try {
+      await postForm();
+      pushNotification('success', 'Message sent with success!');
+    } catch (error) {
+      console.error(error);
+      pushNotification(
+        'error',
+        'An error has occurred, please try again later.',
+      );
+    }
+  }
+
+  async function postForm() {
+    return fetch('/', {
+      method: 'POST',
+      headers: {
+        Content_Type: 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams(formData).toString(),
+    });
+  }
+
   return (
     <Container
       method="POST"
@@ -34,6 +60,7 @@ const ContactForm: React.FC = () => {
       netlify-honeypot="bot-field"
       data-netlify-recaptcha="true"
       name="contact"
+      onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
       <p
@@ -81,7 +108,6 @@ const ContactForm: React.FC = () => {
             id="body"
             required
             maxLength={520}
-            placeholder="Type your message here."
             value={formData.body}
             onChange={handleInputChange}
           />
