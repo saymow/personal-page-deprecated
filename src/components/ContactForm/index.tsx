@@ -1,18 +1,13 @@
 import React, { ChangeEvent, useState } from 'react';
 import { useGlobalContext } from '../../../lib/wrapRootElement';
-import {
-  Button,
-  CaptchaContainer,
-  Container,
-  Fieldset,
-  Input,
-  Textarea,
-} from './styles';
+import Button from '../Button';
+import { Container, Fieldset, Input, Textarea } from './styles';
 
 const FORM_NAME = 'contact';
 
 const ContactForm: React.FC = () => {
   const { pushNotification } = useGlobalContext();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState({
     email: '',
     subject: '',
@@ -34,6 +29,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
 
     try {
+      setIsLoading(true);
       await postForm();
       pushNotification('success', 'Message sent with success!');
     } catch (error) {
@@ -42,6 +38,8 @@ const ContactForm: React.FC = () => {
         'error',
         'An error has occurred, please try again later.',
       );
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -128,7 +126,9 @@ const ContactForm: React.FC = () => {
         </Textarea>
       </Fieldset>
       {/* <CaptchaContainer data-netlify-recaptcha="true"></CaptchaContainer> */}
-      <Button type="submit">Submit</Button>
+      <Button type="submit" isLoading={isLoading}>
+        Submit
+      </Button>
     </Container>
   );
 };

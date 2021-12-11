@@ -72,25 +72,6 @@ export const Textarea = styled.div`
   }
 `;
 
-export const Button = styled.button`
-  display: block;
-  margin-left: auto;
-
-  font-size: 2rem;
-  background: var(--color-purple);
-
-  cursor: pointer;
-  width: 100%;
-  padding: 1rem;
-  outline: 0;
-  border: 0;
-
-  &:disabled {
-    cursor: auto;
-    filter: brightness(60%);
-  }
-`;
-
 export const CaptchaContainer = styled.div`
   margin: 0rem 0 2rem;
 `;
