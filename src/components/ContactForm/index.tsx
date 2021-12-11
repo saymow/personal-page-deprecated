@@ -31,6 +31,7 @@ const ContactForm: React.FC = () => {
     try {
       setIsLoading(true);
       await postForm();
+      clearForm();
       pushNotification('success', 'Message sent with success!');
     } catch (error) {
       console.error(error);
@@ -62,6 +63,14 @@ const ContactForm: React.FC = () => {
         'form-name': FORM_NAME,
         ...formData,
       }),
+    });
+  }
+
+  function clearForm() {
+    setFormData({
+      email: '',
+      subject: '',
+      body: '',
     });
   }
 
