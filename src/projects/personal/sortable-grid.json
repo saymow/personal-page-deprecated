@@ -1,0 +1,37 @@
+{
+  "title": "Sortable Grid",
+  "image": "sortable-grid.png",
+  "description": {
+    "pt": "A tool designed to help you build a configurable layout, through drag and drop, that later can be saved. I Was i charge of building it on my first job, but since a liked, i decided to spend my free time on it.",
+    "en": "Uma ferramenta destinada a ajudar na construção de um layout configuravel, por meio de drag and drop, que pode, posteriormente, ser salvo. Eu fiquei responsável pela construção dela no meu primeiro emprego, e, como gostei, decidi investir meu tempo livre nela."
+  },
+  "references": [
+    {
+      "type": "Github",
+      "url": "https://github.com/saymow/sortable-grid"
+    },
+    {
+      "type": "Netlify",
+      "url": "https://saymow.github.io/sortable-grid/"
+    }
+  ],
+  "techsUsed": [
+    {
+      "field": "Web",
+      "tecnologies": [
+        {
+          "name": "RxJS",
+          "url": "https://rxjs.dev/"
+        },
+        {
+          "name": "Jquery",
+          "url": "https://jquery.com/"
+        },
+        {
+          "name": "JqueryUI",
+          "url": "https://jqueryui.com/"
+        }
+      ]
+    }
+  ]
+}
