@@ -2,13 +2,13 @@
   "title": "Flash cards",
   "image": "flashcards.png",
   "description": {
-    "en": "My first fullstack project. A Fibonnaci based flash card application made during cs50 course.",
-    "pt": "Meu primeiro projeto fullstack. Uma aplicação de flashcards baseado na sequência de Fibonnaci, feita durante cs50."
+    "en": "My first fullstack project. A Fibonacci based flash card application made during cs50 course.",
+    "pt": "Meu primeiro projeto fullstack. Uma aplicação de flashcards baseado na sequência de Fibonacci, feita durante cs50."
   },
   "references": [
     {
       "type": "Github",
-      "url": "https://github.com/saymow/Fibonnaci-s-sequence-based-Flashcards"
+      "url": "https://github.com/saymow/Fibonacci-s-sequence-based-Flashcards"
     }
   ],
   "techsUsed": [
